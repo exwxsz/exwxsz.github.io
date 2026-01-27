@@ -156,12 +156,6 @@ body {
 .mobile-nav-on {
   overflow: hidden;
 }
-#banner {
-  background: url("images/banner.jpg") no-repeat;
-  background-position: center top;
-  background-size: cover;
-  height: 300px;
-}
 #wrap {
   height: 100%;
   width: 100%;
