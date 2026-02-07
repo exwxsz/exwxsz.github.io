@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-02-07T09:21:04.438Z</updated>
+  <updated>2026-02-07T13:25:58.055Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文章归档</title>
+    <link href="http://example.com/2026/02/07/%E6%96%87%E7%AB%A0%E5%BD%92%E6%A1%A3/"/>
+    <id>http://example.com/2026/02/07/%E6%96%87%E7%AB%A0%E5%BD%92%E6%A1%A3/</id>
+    <published>2026-02-07T13:18:02.000Z</published>
+    <updated>2026-02-07T13:25:58.055Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><meting-js server="song" type="autoplay" id="529823828" mode="circulation" autoplay="false" mutex="true" listmaxheight="340px" preload="auto" theme="#ad7a86"></meting-js></body></html>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术分享" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>blender模型配布分享</title>
     <link href="http://example.com/2026/02/07/blender%E6%A8%A1%E5%9E%8B%E9%85%8D%E5%B8%83%E5%88%86%E4%BA%AB/"/>
     <id>http://example.com/2026/02/07/blender%E6%A8%A1%E5%9E%8B%E9%85%8D%E5%B8%83%E5%88%86%E4%BA%AB/</id>
     <published>2026-02-07T09:02:07.000Z</published>
-    <updated>2026-02-07T09:21:04.438Z</updated>
+    <updated>2026-02-07T13:12:30.276Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><span id="more"></span><h1><span id="%E5%9D%87%E4%B8%BA%E4%B8%AA%E4%BA%BA%E8%87%AA%E5%BB%BA%E6%A8%A1%E5%9E%8B%E5%85%8D%E8%B4%B9%E9%85%8D%E5%B8%83">均为个人自建模型，免费配布</span></h1><h2><span id="%E5%A6%82%E6%82%A8%E5%B7%B2%E6%82%89%E7%9F%A5%E4%BB%A5%E4%B8%8B%E8%A7%84%E5%88%99%E5%88%99%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%AF%A5%E6%A8%A1%E5%9E%8B">如您已悉知以下规则，则可以使用该模型</span></h2><h1><span id="1%E5%8F%AA%E5%85%81%E8%AE%B8%E6%94%B9%E9%80%A0%E4%BC%98%E5%8C%96%E9%AA%A8%E9%AA%BC%E5%92%8C%E5%88%9A%E4%BD%93%E9%87%8D%E5%88%B6uv">1.只允许改造，优化骨骼和刚体，重制UV</span></h1><h1><span id="2%E8%AF%B7%E5%8B%BF%E4%BA%8C%E9%85%8D">2.请勿二配</span></h1><h1><span id="3%E8%AF%B7%E5%8B%BF%E7%94%A8%E4%BA%8E%E5%85%AC%E5%BC%80%E6%80%A7%E8%B4%A8%E7%9A%8418%E7%A6%81%E6%9E%81%E7%AB%AF%E5%AE%97%E6%95%99%E5%AE%A3%E4%BC%A0">3.请勿用于公开性质的18禁，极端宗教宣传</span></h1><h1><span id="4%E8%AF%B7%E5%8B%BF%E7%94%A8%E4%BA%8E%E5%95%86%E4%B8%9A%E7%94%A8%E9%80%94">4.请勿用于商业用途</span></h1><h1><span id="5%E4%B8%80%E5%88%87%E7%94%B1%E4%BD%BF%E7%94%A8%E8%80%85%E9%80%A0%E6%88%90%E7%9A%84%E4%BB%BB%E4%BD%95%E6%9D%83%E5%88%A9%E7%BA%A0%E7%BA%B7%E6%A8%A1%E5%9E%8B%E7%BC%96%E8%BE%91%E8%80%85%E4%B8%8D%E6%89%BF%E6%8B%85%E4%BB%BB%E4%BD%95%E8%B4%A3%E4%BB%BB">5.一切由使用者造成的任何权利纠纷，模型编辑者不承担任何责任</span></h1><ol><li><a href="https://www.123684.com/s/dzOqVv-eYrbv">石中剑模型下载链接</a><br><img src="/images/%E7%9F%B3%E4%B8%AD%E5%89%91%E6%BC%94%E7%A4%BA%E5%9B%BE.png" alt="石中剑演示图"></li></ol></body></html>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><span id="more"></span><meting-js server="netease" type="song" id="3340112781" mode="circulation" autoplay="false" mutex="false" listmaxheight="340px" preload="auto" theme="#ad7a86"></meting-js><h1><span id="%E5%9D%87%E4%B8%BA%E4%B8%AA%E4%BA%BA%E8%87%AA%E5%BB%BA%E6%A8%A1%E5%9E%8B%E5%85%8D%E8%B4%B9%E9%85%8D%E5%B8%83">均为个人自建模型，免费配布</span></h1><h2><span id="%E5%A6%82%E6%82%A8%E5%B7%B2%E6%82%89%E7%9F%A5%E4%BB%A5%E4%B8%8B%E8%A7%84%E5%88%99%E5%88%99%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%AF%A5%E6%A8%A1%E5%9E%8B">如您已悉知以下规则，则可以使用该模型</span></h2><h1><span id="1%E5%8F%AA%E5%85%81%E8%AE%B8%E6%94%B9%E9%80%A0%E4%BC%98%E5%8C%96%E9%AA%A8%E9%AA%BC%E5%92%8C%E5%88%9A%E4%BD%93%E9%87%8D%E5%88%B6uv">1.只允许改造，优化骨骼和刚体，重制UV</span></h1><h1><span id="2%E8%AF%B7%E5%8B%BF%E4%BA%8C%E9%85%8D">2.请勿二配</span></h1><h1><span id="3%E8%AF%B7%E5%8B%BF%E7%94%A8%E4%BA%8E%E5%85%AC%E5%BC%80%E6%80%A7%E8%B4%A8%E7%9A%8418%E7%A6%81%E6%9E%81%E7%AB%AF%E5%AE%97%E6%95%99%E5%AE%A3%E4%BC%A0">3.请勿用于公开性质的18禁，极端宗教宣传</span></h1><h1><span id="4%E8%AF%B7%E5%8B%BF%E7%94%A8%E4%BA%8E%E5%95%86%E4%B8%9A%E7%94%A8%E9%80%94">4.请勿用于商业用途</span></h1><h1><span id="5%E4%B8%80%E5%88%87%E7%94%B1%E4%BD%BF%E7%94%A8%E8%80%85%E9%80%A0%E6%88%90%E7%9A%84%E4%BB%BB%E4%BD%95%E6%9D%83%E5%88%A9%E7%BA%A0%E7%BA%B7%E6%A8%A1%E5%9E%8B%E7%BC%96%E8%BE%91%E8%80%85%E4%B8%8D%E6%89%BF%E6%8B%85%E4%BB%BB%E4%BD%95%E8%B4%A3%E4%BB%BB">5.一切由使用者造成的任何权利纠纷，模型编辑者不承担任何责任</span></h1><ol><li><a href="https://www.123684.com/s/dzOqVv-eYrbv">石中剑模型下载链接</a><br><img src="/images/%E7%9F%B3%E4%B8%AD%E5%89%91%E6%BC%94%E7%A4%BA%E5%9B%BE.png" alt="石中剑演示图"></li></ol></body></html>]]></content>
     
     
       
@@ -46,9 +71,9 @@
     <link href="http://example.com/2026/01/28/%E4%B8%AA%E4%BA%BA%E6%B1%89%E5%8C%96%E4%BD%9C%E5%93%81/"/>
     <id>http://example.com/2026/01/28/%E4%B8%AA%E4%BA%BA%E6%B1%89%E5%8C%96%E4%BD%9C%E5%93%81/</id>
     <published>2026-01-28T07:12:57.000Z</published>
-    <updated>2026-02-07T09:16:51.692Z</updated>
+    <updated>2026-02-07T13:11:53.049Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><span id="more"></span><h1><span id="%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E4%B8%BB%E8%A6%81%E6%98%AF%E6%88%91%E6%8B%BF%E6%9D%A5%E5%BD%93%E6%97%A5%E8%AE%B0%E7%94%A8%E4%BA%86%E6%89%80%E4%BB%A5%E8%BF%99%E4%B8%AA%E9%A1%B5%E9%9D%A2%E4%BC%9A%E8%AE%B0%E5%BD%95%E6%88%91%E6%B1%89%E5%8C%96%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%9C%E5%93%81">这个博客主要是我拿来当日记用了，所以这个页面会记录我汉化的一些作品</span></h1><p><strong>本人的日语水平有限，只有N3的程度，因此采用人工+Ai辅助的方式进行汉化。</strong></p><h2><span id="%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9%E5%9D%87%E4%B8%BA%E6%9C%AC%E4%BA%BA%E8%87%AA%E5%B7%B1%E6%93%8D%E4%BD%9C%E8%BF%9B%E8%A1%8C%E8%BD%AC%E8%BD%BD%E8%AF%B7%E9%99%84%E4%B8%8A%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%93%BE%E6%8E%A5%E8%B0%A2%E8%B0%A2">所有内容均为本人自己操作进行，转载请附上本博客链接，谢谢</span></h2><ul><li><h1><span id="%E8%AF%B7%E5%8B%BF%E5%80%92%E5%8D%96%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9%E4%BB%85%E4%BE%9B%E5%AD%A6%E4%B9%A0%E5%8F%82%E8%80%83%E8%8B%A5%E6%9C%89%E4%BE%B5%E7%8A%AF%E4%BD%A0%E7%9A%84%E6%9D%83%E7%9B%8A%E8%AF%B7%E8%81%94%E7%B3%BB%E5%8D%9A%E4%B8%BB%E8%BF%9B%E8%A1%8C%E5%88%A0%E9%99%A4-">请勿倒卖，所有内容仅供学习参考，若有侵犯你的权益，请联系博主进行删除 *</span></h1></li></ul><h2><span id="%E6%B1%89%E5%8C%96%E4%BD%9C%E5%93%81%E5%88%97%E8%A1%A8">汉化作品列表</span></h2><ol><li><p><a href="https://你的跳转链接.com/">美龍艶笑譚～自己肯定感が激低なドラゴン級美少女魔王を、勇者がイチャラブで退治するお話～</a><br> <img src="/images/%E7%BE%8E%E9%BE%8D%E8%89%B6%E7%AC%91%E8%AD%9A%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="美龍艶笑譚封面图"><br> <strong>这本漫画是我从56话才接手的，因为没人更新，我就自己去找了下生肉，其实我也跟大家一样只是个看漫画的普通人，只是我想分享给其他想看这本漫画的人</strong></p></li><li><p><a href="https://exwxsz.github.io/">五彩斑斓的世界小漫画</a><br> <img src="/images/%E4%BA%94%E5%BD%A9%E6%96%91%E6%96%93%E7%9A%84%E4%B8%96%E7%95%8C%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="五彩斑斓的世界封面图"><br> <strong>这个是我很早就翻译过了，不过没有上传，这次就一起上传了</strong></p></li></ol></body></html>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><span id="more"></span><meting-js server="netease" type="song" id="3340107497" mode="circulation" autoplay="false" mutex="false" listmaxheight="340px" preload="auto" theme="#ad7a86"></meting-js><h1><span id="%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E4%B8%BB%E8%A6%81%E6%98%AF%E6%88%91%E6%8B%BF%E6%9D%A5%E5%BD%93%E6%97%A5%E8%AE%B0%E7%94%A8%E4%BA%86%E6%89%80%E4%BB%A5%E8%BF%99%E4%B8%AA%E9%A1%B5%E9%9D%A2%E4%BC%9A%E8%AE%B0%E5%BD%95%E6%88%91%E6%B1%89%E5%8C%96%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%9C%E5%93%81">这个博客主要是我拿来当日记用了，所以这个页面会记录我汉化的一些作品</span></h1><p><strong>本人的日语水平有限，只有N3的程度，因此采用人工+Ai辅助的方式进行汉化。</strong></p><h2><span id="%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9%E5%9D%87%E4%B8%BA%E6%9C%AC%E4%BA%BA%E8%87%AA%E5%B7%B1%E6%93%8D%E4%BD%9C%E8%BF%9B%E8%A1%8C%E8%BD%AC%E8%BD%BD%E8%AF%B7%E9%99%84%E4%B8%8A%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%93%BE%E6%8E%A5%E8%B0%A2%E8%B0%A2">所有内容均为本人自己操作进行，转载请附上本博客链接，谢谢</span></h2><ul><li><h1><span id="%E8%AF%B7%E5%8B%BF%E5%80%92%E5%8D%96%E6%89%80%E6%9C%89%E5%86%85%E5%AE%B9%E4%BB%85%E4%BE%9B%E5%AD%A6%E4%B9%A0%E5%8F%82%E8%80%83%E8%8B%A5%E6%9C%89%E4%BE%B5%E7%8A%AF%E4%BD%A0%E7%9A%84%E6%9D%83%E7%9B%8A%E8%AF%B7%E8%81%94%E7%B3%BB%E5%8D%9A%E4%B8%BB%E8%BF%9B%E8%A1%8C%E5%88%A0%E9%99%A4-">请勿倒卖，所有内容仅供学习参考，若有侵犯你的权益，请联系博主进行删除 *</span></h1></li></ul><h2><span id="%E6%B1%89%E5%8C%96%E4%BD%9C%E5%93%81%E5%88%97%E8%A1%A8">汉化作品列表</span></h2><ol><li><p><a href="https://你的跳转链接.com/">美龍艶笑譚～自己肯定感が激低なドラゴン級美少女魔王を、勇者がイチャラブで退治するお話～</a><br> <img src="/images/%E7%BE%8E%E9%BE%8D%E8%89%B6%E7%AC%91%E8%AD%9A%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="美龍艶笑譚封面图"><br> <strong>这本漫画是我从56话才接手的，因为没人更新，我就自己去找了下生肉，其实我也跟大家一样只是个看漫画的普通人，只是我想分享给其他想看这本漫画的人</strong></p></li><li><p><a href="https://exwxsz.github.io/">五彩斑斓的世界小漫画</a><br> <img src="/images/%E4%BA%94%E5%BD%A9%E6%96%91%E6%96%93%E7%9A%84%E4%B8%96%E7%95%8C%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="五彩斑斓的世界封面图"><br> <strong>这个是我很早就翻译过了，不过没有上传，这次就一起上传了</strong></p></li></ol></body></html>]]></content>
     
     
       
@@ -71,9 +96,9 @@
     <link href="http://example.com/2026/01/27/26-1-27%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/"/>
     <id>http://example.com/2026/01/27/26-1-27%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/</id>
     <published>2026-01-27T11:23:23.000Z</published>
-    <updated>2026-02-07T09:16:38.176Z</updated>
+    <updated>2026-02-07T12:56:10.985Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><span id="more"></span><h1><span id="%E5%80%9F%E5%8A%A9aigithubhexo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%97%A0%E9%9C%80%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%B6%E6%88%90%E6%9C%AC%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">借助AI+github+hexo搭建一个无需购买服务器+零成本的个人博客</span></h1><p><em><strong>借助豆包和grok或者谷歌的ai都能成功部署</strong></em></p><h3><span id="%E5%BD%93%E7%84%B6%E6%98%AF%E7%94%A8%E6%9D%A5%E8%AE%B0%E5%BD%95%E6%88%91%E6%89%80%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85%E5%95%A6%E5%B0%B1%E8%AF%B4%E4%B8%80%E4%B8%AA%E6%97%A5%E8%AE%B0%E7%B0%BF">当然是用来记录我所做的事情啦，就说一个日记簿</span></h3><hr><p><img src="https://i.waifu.pics/8flhYEv.jpg"></p><h3><span id="2026-2-04"><em><strong>2026-2-04</strong></em></span></h3><h1><span id="%E5%88%A9%E7%94%A8zeabur%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2openlist%E7%9A%84webdav%E5%AE%9E%E7%8E%B0%E5%BF%AB%E6%8D%B7%E5%88%86%E4%BA%AB%E8%B5%84%E6%BA%90%E5%B0%86%E4%BC%9A%E5%9C%A8%E6%9C%AC%E7%AB%99%E6%8C%82%E8%BD%BD%E4%BD%BF%E7%94%A8">利用zeabur成功部署openlist的webdav，实现快捷分享资源。将会在本站挂载使用</span></h1></body></html>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><html><head></head><body><span id="more"></span><meting-js server="netease" type="song" id="3340113701" mode="circulation" autoplay="false" mutex="false" listmaxheight="340px" preload="auto" theme="#ad7a86"></meting-js><h1><span id="%E5%80%9F%E5%8A%A9aigithubhexo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%97%A0%E9%9C%80%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%B6%E6%88%90%E6%9C%AC%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">借助AI+github+hexo搭建一个无需购买服务器+零成本的个人博客</span></h1><p><em><strong>借助豆包和grok或者谷歌的ai都能成功部署</strong></em></p><h3><span id="%E5%BD%93%E7%84%B6%E6%98%AF%E7%94%A8%E6%9D%A5%E8%AE%B0%E5%BD%95%E6%88%91%E6%89%80%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85%E5%95%A6%E5%B0%B1%E8%AF%B4%E4%B8%80%E4%B8%AA%E6%97%A5%E8%AE%B0%E7%B0%BF">当然是用来记录我所做的事情啦，就说一个日记簿</span></h3><hr><p><img src="https://i.waifu.pics/8flhYEv.jpg"></p><h3><span id="2026-2-04"><em><strong>2026-2-04</strong></em></span></h3><h1><span id="%E5%88%A9%E7%94%A8zeabur%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2openlist%E7%9A%84webdav%E5%AE%9E%E7%8E%B0%E5%BF%AB%E6%8D%B7%E5%88%86%E4%BA%AB%E8%B5%84%E6%BA%90%E5%B0%86%E4%BC%9A%E5%9C%A8%E6%9C%AC%E7%AB%99%E6%8C%82%E8%BD%BD%E4%BD%BF%E7%94%A8">利用zeabur成功部署openlist的webdav，实现快捷分享资源。将会在本站挂载使用</span></h1></body></html>]]></content>
     
     
       
