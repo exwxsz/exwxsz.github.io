@@ -27,22 +27,21 @@ for i in j :
     a.append(i) 
 print("车牌{0}中的最后一个数字为{1}".format(j,s[-1]),end="")'''
 
-s = 0  # 素数计数器（只数素数）
-# 素数从2开始，排除1
-for i in range(2, 1001):
-    # 标记：先假设i是素数
-    is_prime = True
-    # 检查2~i-1能不能整除i
-    for j in range(2, i):
-        if i % j == 0:
-            is_prime = False
-            break  # 找到因数，不用再查了
-    
-    # 只有是素数才打印+计数
-    if is_prime:
-        print(f"{i:<5}", end="")  # 左对齐占5列，新手也可以写f"{i:5d}" >右对齐，<前面就是填充字符，不写默认是空格
-        s += 1
-        # 每10个素数换行
-        if s == 10:
-            print()
-            s = 0  # 重置计数器
+
+
+#关于素数：除1以外；除了它本身和1能够整除它，其他数不能除以它；偶数基本都不是(除了2)
+#例如421只能被421或1整除
+s = 0 #初始化
+for i in range(2,1001): # 直接从2开始
+    is_sushu = True #需要从遍历开始就默认认为是素数，下一个For遍历才判断是不是，
+    # s = 0 不能for里面初始化，因为每次for循环都会重新初始化
+    for j in range(2,i): 
+        if i % j == 0 :
+            is_sushu = False
+            break #跳出判断i此时的i % j的判断，直接遍历下一个数i进行判断素数
+    if is_sushu == True:
+        print(f"{i:<5}", end="")
+        s += 1 # 没for一次i打印一次就加1
+        if s == 10: #每10个换行
+          print()
+          s = 0   #重置s = 0，每10个换行
