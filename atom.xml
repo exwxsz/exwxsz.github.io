@@ -6,7 +6,7 @@
   <link href="http://exwxsz.github.io/atom.xml" rel="self"/>
   
   <link href="http://exwxsz.github.io/"/>
-  <updated>2026-05-26T06:46:34.039Z</updated>
+  <updated>2026-06-07T08:21:45.516Z</updated>
   <id>http://exwxsz.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>绘世stab启动器-pytorch的问题解决</title>
+    <link href="http://exwxsz.github.io/2026/06/07/%E7%BB%98%E4%B8%96stab%E5%90%AF%E5%8A%A8%E5%99%A8-pytorch%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>http://exwxsz.github.io/2026/06/07/%E7%BB%98%E4%B8%96stab%E5%90%AF%E5%8A%A8%E5%99%A8-pytorch%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</id>
+    <published>2026-06-07T08:15:44.000Z</published>
+    <updated>2026-06-07T08:21:45.516Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><meting-js server="netease" type="song" id="歌曲UID" mode="circulation" autoplay="true" mutex="false" listmaxheight="340px" preload="auto" theme="#ad7a86"></meting-js><!--网易云，单曲，自动播放，开启排斥。将song改为playlist即为歌单播放 --><h1><span id="%E6%9C%80%E8%BF%91%E7%8E%A9%E7%BB%98%E4%B8%96%E8%87%AA%E5%B7%B1%E7%9A%844050%E5%A4%AA%E6%8B%89%E4%BA%86%E8%B7%91%E7%9A%84%E6%85%A2%E5%B0%B1%E5%80%9F%E7%94%A8%E5%AE%A4%E5%8F%8B%E7%9A%84%E7%94%B5%E8%84%915050%E4%BD%86%E6%88%91%E7%9A%84%E7%BB%98%E4%B8%96%E6%98%AF%E4%BF%9D%E5%AD%98%E4%BB%A5%E5%89%8D%E7%9A%84%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E5%9B%A0%E6%AD%A4%E5%87%BA%E7%8E%B0%E4%BA%86%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98">最近玩绘世，自己的4050太拉了，跑的慢，就借用室友的电脑5050,但我的绘世是保存以前的版本，不兼容，因此出现了一些问题</span></h1><p>一、问题背景<br>硬件：A 电脑（主力机） – RTX 5050 Laptop GPU + 最新驱动（支持 CUDA 13.x）</p><p>软件：秋叶绘世整合包（A 电脑），webui-user.bat 启动</p><p>目标：B 电脑（设计本）通过局域网访问 A 电脑的 SD WebUI，并使用 Photoshop pslink 插件远程出图</p><p>第一次启动绘世启动器时，弹窗警告：</p><p>当前 PyTorch 版本 2.0.1+cu118，当前显卡类型 CUDA 13030，版本不匹配，请升级 PyTorch 或更新驱动。</p><p>虽然驱动很新（理论上向下兼容），但运行 torch.cuda.is_available() 返回 True 后，实际加载模型时依然报错：</p><p>text<br>RuntimeError: CUDA error: no kernel image is available for execution on the device<br>以及：</p><p>text<br>UserWarning: NVIDIA GeForce RTX 5050 Laptop GPU with CUDA capability sm_120 is not compatible…<br>这说明 PyTorch 版本过低，不支持 sm_120 架构，必须升级到支持 CUDA 12.8 及以上的版本（如 PyTorch 2.7+cu128）。</p><p>二、核心解决方案：升级 PyTorch 到支持 RTX 5050 的版本</p><h2><span id="%E6%8E%A8%E8%8D%90%E9%80%89%E6%8B%A9-270xfor0030%E7%9A%84%E7%89%88%E6%9C%AC%E7%84%B6%E5%90%8E%E7%9B%B4%E6%8E%A5%E5%9C%A8%E7%BB%98%E4%B8%96%E4%B8%AD%E5%AE%89%E8%A3%85%E4%BF%AE%E5%A4%8D%E8%99%BD%E7%84%B6%E6%85%A2%E4%BD%86%E4%B8%8D%E5%AE%B9%E6%98%93%E5%87%BA%E9%94%99">推荐选择 2.70+xfor0.030的版本，然后直接在绘世中安装修复，虽然慢，但不容易出错</span></h2><p>2.1 正确版本选择<br>PyTorch：2.7.0+cu128（或更高，如 2.8、2.11）</p><p>TorchVision：0.22.0+cu128</p><p>TorchAudio：2.7.0+cu128</p><p>xformers：0.0.29.post3（与 2.7.0 匹配）</p><p>⚠️ 注意：截至本文，官方的 cu128 目录下已有 torch-2.7.0+cu128 稳定版，不要使用 cu118 或 cu124，它们无法驱动 sm_120。</p><p>2.2 手动下载 + IDM 加速安装（避免 pip 龟速）<br>直接访问 PyTorch 官方 whl 索引：</p><p><a href="https://download.pytorch.org/whl/cu128/">https://download.pytorch.org/whl/cu128/</a></p><p>下载以下三个文件（适配 Python 3.10，Win64）：</p><p>text<br>torch-2.7.0+cu128-cp310-cp310-win_amd64.whl<br>torchvision-0.22.0+cu128-cp310-cp310-win_amd64.whl<br>torchaudio-2.7.0+cu128-cp310-cp310-win_amd64.whl<br>用 IDM 多线程下载，总大小约 2.7GB，速度可跑满带宽。</p><p>2.3 在绘世整合包中安装（无需虚拟环境）<br>进入整合包根目录（如 D:\sd-webui-aki-v4.4），地址栏输入 cmd 打开命令行。</p><p>卸载旧版（如果存在）：</p><p>cmd<br>.\python\python.exe -m pip uninstall torch torchvision torchaudio xformers -y<br>安装新包（whl 文件放在 .\python 下）：</p><p>cmd<br>.\python\python.exe -m pip install .\python\torch-2.7.0+cu128-cp310-cp310-win_amd64.whl<br>.\python\python.exe -m pip install .\python\torchvision-0.22.0+cu128-cp310-cp310-win_amd64.whl<br>.\python\python.exe -m pip install .\python\torchaudio-2.7.0+cu128-cp310-cp310-win_amd64.whl<br>验证环境：</p><p>cmd<br>.\python\python.exe -c “import torch; print(torch.<strong>version</strong>); print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0))”<br>期望输出：</p><p>text<br>2.7.0+cu128<br>True<br>NVIDIA GeForce RTX 5050 Laptop GPU<br>再无任何警告或错误。</p><p>2.4 安装匹配的 xformers（可选，但推荐）<br>下载 xformers-0.0.29.post3-cp310-cp310-win_amd64.whl（同上源），然后使用 –no-deps 安装，避免自动升级 torch：</p><p>cmd<br>.\python\python.exe -m pip install –no-deps .\python\xformers-0.0.29.post3-cp310-cp310-win_amd64.whl<br>注意：不要用 pip 直接 install xformers，它会拉取新版本（如 0.0.35），并强制将 torch 升级到 2.12+（CPU 版本），破坏环境。</p><p>三、其他环境问题的处理<br>3.1 ONNXRuntime 无法使用 GPU<br>绘世启动器弹出 ONNXRuntime 警告，解决方法：在启动器的“高级选项 – 环境维护”中点击“升级 ONNXRuntime”，或手动安装：</p><p>cmd<br>.\python\python.exe -m pip install onnxruntime-gpu –extra-index-url <a href="https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/">https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/</a><br>3.2 VAE 加载失败（UnpicklingError）<br>启动时遇到：</p><p>text<br>_pickle.UnpicklingError: Weights only load failed… unsupported global: GLOBAL pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint<br>这是因为新版 PyTorch 默认 weights_only=True，而旧版 VAE 文件（如 animevae.pt）包含不允许的全局对象。</p><p>简单解决：移走或重命名该 VAE 文件（D:\sd-webui-aki-v4.4\models\VAE\animevae.pt → animevae.pt.bak），使用模型内嵌 VAE，不影响出图。</p><p>彻底解决：修改 modules/sd_models.py 中的 read_state_dict 函数，将 torch.load(…, weights_only=True) 改为 weights_only=False（前提是你信任该 VAE 来源）。</p><p>3.3 绘世启动器自定义参数的正确写法<br>在“高级选项 – 自定义参数”中，只填写参数本身，不要写 set COMMANDLINE_ARGS=。</p><p>✅ 正确：</p><p>text<br>–listen –api –medvram-sdxl –theme dark –opt-sdp-attention<br>❌ 错误：</p><p>text<br>set COMMANDLINE_ARGS=–listen –api<br>否则会报 unrecognized arguments: set。</p><h2><span id="%E6%88%96%E8%80%85%E7%9B%B4%E6%8E%A5%E5%9C%A8%E7%BB%98%E4%B8%96%E4%B8%AD%E5%8F%96%E6%B6%88%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%82%E6%95%B0%E7%9B%B4%E6%8E%A5-%E9%AB%98%E8%BF%9B%E9%80%89%E9%A1%B9-%E7%9B%91%E5%90%AC%E8%AE%BE%E7%BD%AE%E6%94%B9%E6%88%90%E6%9C%AC%E6%9C%BAip%E5%B0%B1%E5%A5%BD%E4%BA%86%E6%9B%B4%E6%8E%A8%E8%8D%90">或者，直接在绘世中，取消自定义参数，直接-高进选项-监听设置，改成本机ip就好了(更推荐)</span></h2><p>四、局域网远程调用配置<br>4.1 A 电脑（服务器）设置<br>修改 webui-user.bat（或用启动器自定义参数）添加：</p><p>text<br>set COMMANDLINE_ARGS=–listen –api<br>防火墙放行端口：创建入站规则，允许 TCP 7860 端口（公用/专用全部勾选）。</p><p>启动后，命令行显示 Running on local URL: <code>http://0.0.0.0:7860</code> 表示监听所有网卡。</p><p>记录 A 电脑的 IPv4 地址（ipconfig，如 10.43.28.190）。</p><p>4.2 B 电脑（客户端）配置<br>浏览器访问 <code>http://你的本机ip，如果能打开</code> WebUI，说明网络已通。</p><p>Photoshop 中打开 pslink 插件（注意：作者已停止维护，可能存在兼容问题）。在“自有算力 URL”处填写：</p><p>text<br><code>http://你的本机ip:7860</code><br>保存设置并重启 Photoshop，即可生成图片。</p><p>若 pslink 长时间提示“排队”或“网络错误”，优先检查 A 电脑是否正常出图（浏览器测试），若浏览器正常，则问题在插件本身，可考虑更换更新维护的插件或直接使用 WebUI 的 API。</p><p>五、经验总结与避坑指南<br>RTX 50 系列必须使用 PyTorch 2.7+cu128 或更高，任何 cu118/cu124 版本均无法彻底解决 sm_120 兼容性。</p><p>不要轻信 torch.cuda.is_available() == True，它只能证明驱动和 CUDA 运行时可用，不能证明具体 kernel 可以执行。务必用真实模型加载测试。</p><p>手动下载 whl + 本地安装是解决网络慢、版本错乱的最佳实践。IDM 多线程远超 pip 单线程。</p><p>xformers 版本必须与 torch 严格匹配。使用 –no-deps 安装，防止破坏主环境。</p><p>绘世启动器的自定义参数框只写参数，不要写 set 命令。</p><p>局域网远程调用时，防火墙入站规则、–listen –api 缺一不可。若 B 电脑浏览器可以访问但 pslink 失败，尝试关闭 A 电脑防火墙临时测试，或更新 pslink 插件。</p><p>六、最终成果<br>A 电脑 SD WebUI 稳定运行，支持 RTX 5050 全速推理。</p><p>B 电脑通过局域网访问</p><p>Photoshop pslink 插件成功调用远程 SD 服务，实现设计 – 生成 – 迭代的远程工作流。</p><p>如果你也遇到了类似的环境问题，希望这篇记录能帮你节省几天甚至一周的折腾时间。若有疑问，欢迎在评论区交流。</p><p>最后强调：一切操作前请备份整合包，修改代码前先理解其含义。</p></body></html>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;meting-js server=&quot;netease&quot; type=&quot;song&quot; id=&quot;歌曲UID&quot; mode=&quot;circulation&quot; autoplay=&quot;true&quot; mutex=&quot;false&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="杂谈与发电" scheme="http://exwxsz.github.io/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/"/>
+    
+    <category term="资源分享" scheme="http://exwxsz.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo插件-侧边栏抽屉</title>
@@ -37,11 +66,11 @@
     
     
     
+    <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
+    
     <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     <category term="资源分享" scheme="http://exwxsz.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
     
   </entry>
   
@@ -122,13 +151,13 @@
     
     
     
+    <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
+    
     <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     <category term="杂谈与发电" scheme="http://exwxsz.github.io/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/"/>
     
     <category term="资源分享" scheme="http://exwxsz.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
     
   </entry>
   
@@ -209,9 +238,9 @@
     
     
     
-    <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
-    
     <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
+    
+    <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -236,9 +265,9 @@
     
     
     
-    <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
-    
     <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
+    
+    <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -390,9 +419,9 @@
     
     
     
-    <category term="资源分享" scheme="http://exwxsz.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
     <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
+    
+    <category term="资源分享" scheme="http://exwxsz.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
