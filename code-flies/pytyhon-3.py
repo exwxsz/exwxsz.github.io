@@ -139,3 +139,23 @@ file.writelines(sequence)
 
 向文件写入一个序列字符串列表，如果需要换行则要自己加入每行的换行符。
 '''
+
+#判断字符串是否为数字
+def is_number(s):
+  try: #一种新的判断方法;跟if类似
+    float(s)  # 尝试将字符串转换为浮点数
+    return True  # 如果成功，返回True
+  except ValueError: # 如果转换失败，抛出ValueError异常
+    pass
+
+  try:
+    from unicodedata import numeric  # 导入unicodedata模块中的numeric函数
+    numeric(s)  # 尝试将字符串转换为数字
+    return True # 如果成功，返回True
+  except (TypeError, ValueError):
+    pass
+
+    return False # 如果两种方法都失败，返回False
+
+input_str = input("请输入一个字符串：") # 获取用户输入的字符串
+print(is_number(input_str)) # 调用is_number函数判断输入的字符串是否为数字，并打印结果
