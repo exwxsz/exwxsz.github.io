@@ -141,7 +141,8 @@ file.writelines(sequence)
 '''
 
 #判断字符串是否为数字
-def is_number(s):
+
+'''def is_number(s):
   try: #一种新的判断方法;跟if类似
     float(s)  # 尝试将字符串转换为浮点数
     return True  # 如果成功，返回True
@@ -149,8 +150,10 @@ def is_number(s):
     pass
 
   try:
-    from unicodedata import numeric  # 导入unicodedata模块中的numeric函数
-    numeric(s)  # 尝试将字符串转换为数字
+    # from unicodedata import numeric  # 导入unicodedata模块中的numeric函数
+    # numeric(s)  # 尝试将字符串转换为数字
+    import unicodedata  # 导入unicodedata模块
+    unicodedata.numeric(s)  # 尝试将字符串转换为数字
     return True # 如果成功，返回True
   except (TypeError, ValueError):
     pass
@@ -159,3 +162,78 @@ def is_number(s):
 
 input_str = input("请输入一个字符串：") # 获取用户输入的字符串
 print(is_number(input_str)) # 调用is_number函数判断输入的字符串是否为数字，并打印结果
+'''
+
+'''
+def great():
+  print("来自example的问候")
+  print("测试")
+if __name__=="__main__":
+  print("该great()函数正在直接运行")
+  great()
+else:
+  print("该great()函数正在被导入")
+  great()
+'''
+
+
+#面向编程
+#面向类
+
+'''class NameOfClass:
+  #构造函数
+  def __init__(self,cat_name,cat_size,cat_color):   #第一个字符永远是self必须不变
+    self.name = cat_name  #self.name是实例属性，如果没有self就单纯是变量了
+    self.size = cat_size
+    self.color = cat_color
+  def speak(self,contents,times):
+    self.contents = contents
+    self.times = times
+    print(f'{self.name}说{self.contents}，重复了{self.times}次')
+  #实例方法
+cat1 = NameOfClass("汐汐","大","白色")  #创建一个实例对象cat1
+cat2 = NameOfClass("小美","小","粉色")  #创建一个实例对象cat2
+cat3 = NameOfClass("心夏","小","灰色")  #创建一个实例对象cat3 
+cat1.speak("喵",3)  #调用实例方法
+print(f'第一个猫的名字是{cat1.name}，它的体型是{cat1.size}，它的颜色是{cat1.color}')
+print(f'第二个猫的名字是{cat2.name}，它的体型是{cat2.size}，它的颜色是{cat2.color}')
+print(f'第三个猫的名字是{cat3.name}，它的体型是{cat3.size}，它的颜色是{cat3.color}')
+print(f'{cat1.name}刚刚说的是{cat1.contents}且重复了{cat1.times}次')
+'''
+
+
+'''
+
+#案例，
+# 汽车，宝马，奔驰，大众，特斯拉
+# 2024款，2025款，2026款
+# 喷漆:普通喷漆，金属喷漆，哑光喷漆
+# 车身颜色：白色，黑色，红色，蓝色，绿色，黄色，紫色，粉色，灰色
+# 轮胎：普通轮胎，运动轮胎，越野轮胎
+# 车灯：普通车灯，LED车灯，氙气车灯
+# 车身尺寸：小型车，中型车，大型车
+# 是否为痛车
+# 是否为新能源车
+
+class Car:
+  def __init__(self,name,model,color,paint_type,tire_type,light_type,size,is_pain,is_new_energy):
+    self.name = name
+    self.model = model #日期
+    self.color = color #样式
+    self.paint_type = paint_type #喷漆
+    self.tire_type = tire_type#轮胎
+    self.light_type = light_type#车灯
+    self.size = size#车型
+    self.is_pain = is_pain#是否为痛车
+    self.is_new_energy = is_new_energy#是否为新能源
+  def speed(self,max_speed,重量):
+    self.max_speed = max_speed
+    self.重量 = 重量
+car_1 = Car("宝马","2024款","白色","普通喷漆","普通轮胎","普通车灯","中型车","爱莉希雅痛车","新能源车")
+car_2 = Car("奔驰","2025款","黑色","金属喷漆","运动轮胎","LED车灯","大型车","纱凪痛车","是新能源车")
+car_1.speed(200,1.7)
+car_2.speed(250,1.8)
+print(f'{car_1.model}的{car_1.name}是{car_1.color}，是{car_1.paint_type}，是{car_1.tire_type}，是{car_1.light_type}，是{car_1.size}，是{car_1.is_pain}，是{car_1.is_new_energy}；而且{car_1.name}的最高速度是{car_1.max_speed}公里/小时,并且重量是{car_1.重量}吨')  
+print(f'{car_2.name}的最高速度是{car_2.max_speed}公里/小时,并且重量是{car_2.重量}吨')
+'''
+
