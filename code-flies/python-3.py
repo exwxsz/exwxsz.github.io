@@ -237,3 +237,44 @@ print(f'{car_1.model}的{car_1.name}是{car_1.color}，是{car_1.paint_type}，�
 print(f'{car_2.name}的最高速度是{car_2.max_speed}公里/小时,并且重量是{car_2.重量}吨')
 '''
 
+
+'''
+#引入pathlib模块的Path类
+from pathlib import Path
+# 获取当前脚本所在的文件夹路径，再拼接 text.txt
+file_path = Path(__file__).parent / "text.txt"  
+
+
+with open(file_path,"r") as f:
+  line = f.readline()
+  while line !="": #判断该行是否为空
+    print(line)
+    line = f.readline()
+  lines = f.readlines()
+  for i in  lines: #如果用for循环，就会打出跟上面一样的内容
+    #如果不用for循环就会把整个列表打印出来
+    print(i)    
+
+with open(file_path,"r+") as f:
+  f.write("123\n456\n789\n")
+with open(file_path,"a") as f:
+  f.write("this is new contents\n")
+with open(file_path,"r+") as f:
+  print(f.read())
+'''
+
+
+
+def getFilelastName(filename):
+  return filename[filename.rfind(".") -1:] #就是切片，从点开始，点位0位，点后面位1位开始切，所以是+1
+print(getFilelastName("example.txt")) # 输出 "e.txt"
+print(getFilelastName("example.tar.gz")) # 输出 "r.gz"  
+
+from pathlib import Path
+with open(Path(__file__).parent / "text.txt","w+") as f:
+  f.write("不错，很好\n666\n") #新建一个文件，此时写入，文件读取到最后一行，打印读取是空
+  s= f.tell() #返回文件当前位置
+  f.seek(0,0)#移动文件对象到最初,也是切片方法
+  str = f.read()
+  print(s,'\n',str,len(str)) #打印当前位置，读取的内容，读取内容的长度
+
