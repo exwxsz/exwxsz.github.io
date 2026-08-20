@@ -6,7 +6,7 @@
   <link href="http://exwxsz.github.io/atom.xml" rel="self"/>
   
   <link href="http://exwxsz.github.io/"/>
-  <updated>2026-06-30T05:47:58.661Z</updated>
+  <updated>2026-08-20T16:37:50.757Z</updated>
   <id>http://exwxsz.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-popup|自定义弹窗</title>
+    <link href="http://exwxsz.github.io/2026/08/21/hexo-popup-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%B9%E7%AA%97/"/>
+    <id>http://exwxsz.github.io/2026/08/21/hexo-popup-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%B9%E7%AA%97/</id>
+    <published>2026-08-20T16:22:13.000Z</published>
+    <updated>2026-08-20T16:37:50.757Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><meting-js server="netease" type="song" id="歌曲UID" mode="circulation" autoplay="true" mutex="false" listmaxheight="340px" preload="auto" theme="#ad7a86"></meting-js><!--网易云，单曲，自动播放，开启排斥。将song改为playlist即为歌单播放 --><h1><span id="%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E7%9A%84hexo%E6%8F%92%E4%BB%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%B9%E7%AA%97%E6%8F%92%E4%BB%B6">个人开发的hexo插件|自定义弹窗插件</span></h1><h2><span id="%E5%8F%AF%E7%94%A8%E4%BD%9C%E8%B5%9E%E5%8A%A9%E5%BC%B9%E5%87%BA">可用作赞助弹出</span></h2><h2><span id="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8">快速入门</span></h2><h2><span id="%E5%AE%89%E8%A3%85-npm-install-githubexwxszhexo-popup-counter---save">安装 <code>npm install github:exwxsz/hexo-popup-counter --save</code></span></h2><h1><span id="%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-_configyml%E6%96%B0%E5%A2%9E%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9">配置文件 _config.yml新增以下内容</span></h1><pre class="line-numbers language-none"><code class="language-none">popup_counter:  enable: true  title: "欢迎访问本站,急需大米救助谢谢喵"  content: "确认你是否满18"  images:    - /images/banner.jpg   # 换成你自己的图片路径，也可以留空数组 []  confirmText: "是"  cancelText: "不是"  width: "480px"  maxWidth: "600px"  showOnce: false # false=每次刷新都弹，方便测试<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1><span id="%E8%8B%A5%E6%9C%89%E7%94%A8%E8%AF%B7%E7%BB%99%E6%88%91star%E8%B0%A2%E8%B0%A2%E5%96%B5">若有用请给我star谢谢喵</span></h1><h1><span id="%E6%B2%A1%E6%9C%89%E7%B1%B3%E4%BA%86%E5%96%B5%E8%AF%B7%E5%A5%BD%E5%BF%83%E4%BA%BA%E8%AF%B7%E6%88%91%E5%96%9D%E5%A5%B6%E8%8C%B6%E8%B0%A2%E8%B0%A2%E5%96%B5">没有米了喵，请好心人请我喝奶茶谢谢喵</span></h1><p><img src="https://api.catcat.li/api/random"></p></body></html>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;meting-js server=&quot;netease&quot; type=&quot;song&quot; id=&quot;歌曲UID&quot; mode=&quot;circulation&quot; autoplay=&quot;true&quot; mutex=&quot;false&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="个人创作" scheme="http://exwxsz.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/"/>
+    
+    <category term="技术分享" scheme="http://exwxsz.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="杂谈与发电" scheme="http://exwxsz.github.io/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/"/>
+    
+    <category term="资源分享" scheme="http://exwxsz.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>python基础入门练习题</title>
