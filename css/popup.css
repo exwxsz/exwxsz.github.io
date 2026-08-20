@@ -1,0 +1,161 @@
+/* =============================================
+ * 弹窗样式 - 毛玻璃效果 + 自适应大小
+ * 三板块结构：A(文字) / B(图片) / C(按钮)
+ * ============================================= */
+
+/* 弹窗遮罩层 */
+.popup-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 淡入动画 */
+  animation: maskFadeIn 0.25s ease;
+}
+
+/* 弹窗主体 */
+.popup-box {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: var(--popup-width, 480px);
+  max-width: var(--popup-max-width, 800px);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* 弹出动画 */
+  animation: popupScaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 板块A：文字区域 */
+.popup-section-a {
+  padding: 28px 28px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.popup-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.popup-content {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 板块B：图片区域 */
+.popup-section-b {
+  padding: 16px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.popup-img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* 板块C：按钮区域 */
+.popup-section-c {
+  padding: 16px 28px 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.popup-btn {
+  min-width: 120px;
+  height: 42px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* 确认按钮 - 绿色 */
+.popup-btn-confirm {
+  background: #10b981;
+  color: #fff;
+}
+
+.popup-btn-confirm:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* 取消按钮 - 白色毛玻璃 */
+.popup-btn-cancel {
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.popup-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+/* 动画定义 */
+@keyframes maskFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+  .popup-box {
+    width: 90vw !important;
+    margin: 0 20px;
+  }
+
+  .popup-section-a,
+  .popup-section-b,
+  .popup-section-c {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
