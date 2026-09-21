@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> Python的学习-2 -  SanaMeowのBlog</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5170359_6vkc5mmpv2.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="/images/favicon.ico"
+			type="image/x-icon"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="SanaMeowのBlog" type="application/atom+xml">
+<script>window.POPUP_CONFIG = {"title":"欢迎访问本站,急需大米救助谢谢喵","content":"求求你了喵","images":["/images/zanzuma.png"],"confirmText":"大发慈悲地赏","cancelText":"狠心护食不给","width":"480px","maxWidth":"600px","storageKey":"hexo_popup_counter","showOnce":true};</script><link rel="stylesheet" href="/css/popup.css"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/主题图.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="SanaMeowのBlog">
+        <img
+			src="https://www.mikupara.com/vertical_pics/128447532_p0.jpg"
+			alt="SanaMeow"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://www.mikupara.com/vertical_pics/128447532_p0.jpg" title="SanaMeow">
+			<img
+				src="https://www.mikupara.com/vertical_pics/128447532_p0.jpg"
+				alt="SanaMeow"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>22</div>
+		<div><span>标签</span>4</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="拼好站"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				拼好站
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/atom.xml"
+			title="RSS订阅"
+		>
+			<i
+				class="kirafont
+					
+						icon-dingyue
+					"
+			></i>
+			<div class="kira-list-item-content">
+				RSS订阅
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/pan.html"
+			title="网盘链接转换"
+		>
+			<i
+				class="kirafont
+					
+						icon-wxbgongju
+					"
+			></i>
+			<div class="kira-list-item-content">
+				网盘链接转换
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			target="_blank" rel="noopener" href="https://sanalist.zeabur.app/"
+			title="sana资源盘"
+		>
+			<i
+				class="kirafont
+					
+						icon-logo
+					"
+			></i>
+			<div class="kira-list-item-content">
+				sana资源盘
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/427595734"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: #e76a8d; background-color: rgba(231,106,141,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/exwxsz"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: #191717; background-color: rgba(25,23,23,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://steamcommunity.com/profiles/76561199077601799/"
+				target="_blank"
+				mdui-tooltip="{content: 'steam'}"
+				style="color: #a50f0f; background-color: rgba(165,15,15,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-steam1
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/" style="font-size: 10px;">个人创作</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 20px;">技术分享</a> <a href="/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/" style="font-size: 15px;">杂谈与发电</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 15px;">资源分享</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">22</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">SanaMeow</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		search<div style="text-align:center;margin-top:5px;font-size:12px;color:#888;line-height:1.6"><div>🍀 已运行 <strong id="sidebar-days" style="color:#e67e22;font-weight:600">0</strong> 天</div></div><script>document.addEventListener("DOMContentLoaded",function(){const t=new Date("2026-01-27T00:00:00+08:00");function e(){const e=new Date,n=Math.abs(e-t),o=Math.floor(n/864e5);document.getElementById("sidebar-days").textContent=o}e(),setInterval(e,864e5)})</script>
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/images/主题图.jpg"
+				data-sizes="auto"
+				alt="Python的学习-2"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>Python的学习-2</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年04月08日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.1k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
+		</div>
+		<meting-js
+  server="netease"
+  type="song"
+  id="1391419936"
+  mode="circulation"
+  autoplay="true"
+  mutex="false"
+  listmaxheight="340px"
+  preload="auto"
+  theme="#ad7a86">
+</meting-js>
+
+<h1 id="第三章-程序控制结构-项目一（2026春季）作业"><a href="#第三章-程序控制结构-项目一（2026春季）作业" class="headerlink" title="第三章 程序控制结构-项目一（2026春季）作业"></a>第三章 程序控制结构-项目一（2026春季）作业</h1><h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p><img src="/../images/2026-4-21/Snipaste_2026-04-21_21-52-27.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment">#一般PTA它的输入没有文字，那么这里也不能有，因为它傻篮。有就不给对</span></span><br><span class="line"><span class="keyword">if</span> a &gt;= <span class="number">0</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;当前年龄为<span class="subst">&#123;a&#125;</span>岁&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二提"><a href="#第二提" class="headerlink" title="第二提"></a>第二提</h2><p><img src="/../images/2026-4-21/Snipaste_2026-04-21_21-52-41.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> b == <span class="number">0</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;除零错误&#x27;</span>) <span class="comment">#这本更傻篮，我‘零’写的是罗马数字‘0’它就不给我对，气笑了。我找半天的问题</span></span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">  c = a / b</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;a:<span class="number">.1</span>f&#125;</span> / <span class="subst">&#123;b:<span class="number">.1</span>f&#125;</span> = <span class="subst">&#123;c:<span class="number">.2</span>f&#125;</span>&#x27;</span>) <span class="comment"># 没招，只能这样让每个数字都为浮点数</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><p><img src="/../images/2026-4-21/Snipaste_2026-04-21_21-52-47.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">0</span> <span class="keyword">or</span> n == <span class="number">1</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n&#125;</span> indian boy.&#x27;</span>) <span class="comment"># 气笑了这个，直接考我英语的单复数了</span></span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n&#125;</span> indian boys.&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h2><p><img src="/../images/2026-4-21/Snipaste_2026-04-21_21-53-04.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment"># 身高</span></span><br><span class="line">d = b * b</span><br><span class="line">c = a / d</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> c &lt; <span class="number">18.5</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;消瘦&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> c &gt; <span class="number">24</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;超重&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;正常&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h2><p><img src="/../images/2026-4-21/Snipaste_2026-04-21_21-53-25.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">user = <span class="built_in">input</span>().split()</span><br><span class="line">a = <span class="built_in">float</span>(user[<span class="number">0</span>]) <span class="comment"># 输入字符串</span></span><br><span class="line">op = user[<span class="number">1</span>] <span class="comment"># 输入运算符</span></span><br><span class="line">b = <span class="built_in">float</span>(user[<span class="number">2</span>]) <span class="comment"># 输入字符串</span></span><br><span class="line"><span class="keyword">if</span> op == <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">  c = a+b</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c:<span class="number">.0</span>f&#125;</span>&#x27;</span>) <span class="comment"># 踏马的直接屎山代码堆积</span></span><br><span class="line"><span class="keyword">elif</span> op == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">  c = a-b</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c:<span class="number">.0</span>f&#125;</span>&#x27;</span>) <span class="comment"># 既然不能一步用浮点表示，就直接屎山代码发力</span></span><br><span class="line"><span class="keyword">elif</span> op == <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">  c = a*b</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c:<span class="number">.0</span>f&#125;</span>&#x27;</span>)  <span class="comment">#没招</span></span><br><span class="line"><span class="keyword">elif</span> op == <span class="string">&#x27;/&#x27;</span>:</span><br><span class="line">  c = a/b</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;无效运算符&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://api.mikupara.com/"></p>
+<h1 id="第三章程序控制结构-项目2（2026年春）PTA第三次作业"><a href="#第三章程序控制结构-项目2（2026年春）PTA第三次作业" class="headerlink" title="第三章程序控制结构-项目2（2026年春）PTA第三次作业"></a>第三章程序控制结构-项目2（2026年春）PTA第三次作业</h1><h2 id="第一题-1"><a href="#第一题-1" class="headerlink" title="第一题"></a>第一题</h2><p><img src="/../images/2026-5-20/%E7%AC%AC%E4%B8%80%E9%A2%98.png"></p>
+<p><img src="/../images/2026-5-20/%E7%AC%AC%E4%B8%80%E9%A2%98(1).png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s = []</span><br><span class="line">a = []</span><br><span class="line">j = input(&quot;&quot;)</span><br><span class="line">for i in j :</span><br><span class="line">  if i.isdigit():</span><br><span class="line">    s.append(i) #判断是否为数字，是就添加到s列表，否就全部添加a列表</span><br><span class="line">  else:</span><br><span class="line">    a.append(i)</span><br><span class="line">print(&quot;车牌&#123;0&#125;中的最后一个数字为&#123;1&#125;&quot;.format(j,s[-1]),end=&quot;&quot;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p><img src="/../images/2026-5-20/%E7%AC%AC%E4%BA%8C%E9%A2%98.png"></p>
+<p><img src="/../images/2026-5-20/%E7%AC%AC%E4%BA%8C%E9%A2%981.png"></p>
+<h2 id="这个也是非常简单"><a href="#这个也是非常简单" class="headerlink" title="这个也是非常简单"></a>这个也是非常简单</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>): <span class="comment">#直接遍历1-100</span></span><br><span class="line">  <span class="keyword">if</span> i % <span class="number">3</span> ==<span class="number">0</span> <span class="keyword">and</span> i % <span class="number">5</span> != <span class="number">0</span>:</span><br><span class="line">    s += i</span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三题-1"><a href="#第三题-1" class="headerlink" title="第三题"></a>第三题</h2><p><img src="/../images/2026-5-20/%E7%AC%AC%E4%B8%89%E9%A2%98.png"></p>
+<p><img src="/../images/2026-5-20/%E7%AC%AC%E4%B8%89%E9%A2%981.png"></p>
+<h2 id="这也是经典题型了嗷"><a href="#这也是经典题型了嗷" class="headerlink" title="这也是经典题型了嗷"></a>这也是经典题型了嗷</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):<span class="comment">#为什么是i+1?因为i最多是9如果是9，j就最多只能是8</span></span><br><span class="line">    <span class="keyword">if</span> i * j &lt; <span class="number">10</span>:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>X<span class="subst">&#123;j&#125;</span>= <span class="subst">&#123;i*j&#125;</span>&#x27;</span>,end=<span class="string">&quot; &quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>X<span class="subst">&#123;j&#125;</span>=<span class="subst">&#123;i*j&#125;</span>&#x27;</span>,end=<span class="string">&quot; &quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>() <span class="comment">#for遍历了j之后就要换行进入下一个i的for循环遍历</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="第四题-1"><a href="#第四题-1" class="headerlink" title="第四题"></a>第四题</h2><p><img src="/../images/2026-5-20/%E7%AC%AC%E5%9B%9B%E9%A2%98.png"></p>
+<h2 id="这题只需要2个for遍历和几个if就可以做出来"><a href="#这题只需要2个for遍历和几个if就可以做出来" class="headerlink" title="这题只需要2个for遍历和几个if就可以做出来"></a>这题只需要2个for遍历和几个if就可以做出来</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#需要你提前知道什么是素数</span></span><br><span class="line">s = <span class="number">0</span><span class="comment">#初始化</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">1001</span>):<span class="comment">#直接从2开始</span></span><br><span class="line">  is_sushu = <span class="literal">True</span> <span class="comment">#计算机不知道什么是素数，所以需要写代码来判断</span></span><br><span class="line">  <span class="comment">#因此默认2,1000都是素数</span></span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span> (<span class="number">2</span>,i):<span class="comment">#从2开始到i</span></span><br><span class="line">    <span class="keyword">if</span> i % j == <span class="number">0</span>: <span class="comment">#判断是否为素数</span></span><br><span class="line">      is_sushu = <span class="literal">False</span> <span class="comment">#如果不是素数，那么就为false</span></span><br><span class="line">      <span class="keyword">break</span> <span class="comment">#跳出循环</span></span><br><span class="line">  <span class="keyword">if</span> is_sushu == <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;i:&lt;<span class="number">5</span>&#125;</span>&#x27;</span>,end=<span class="string">&quot;&quot;</span>)</span><br><span class="line">    s += i <span class="comment">#每行素数个数相加</span></span><br><span class="line">    <span class="keyword">if</span> s == <span class="number">10</span>: <span class="comment">#输出了10个素数就换行</span></span><br><span class="line">      <span class="built_in">print</span>()</span><br><span class="line">      s = <span class="number">0</span> <span class="comment">#初始化s=0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="第五题-1"><a href="#第五题-1" class="headerlink" title="第五题"></a>第五题</h2><p><img src="/../images/2026-5-20/%E7%AC%AC%E4%BA%94%E9%A2%98.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 接收输入并拆分成年、月、日</span></span><br><span class="line">year, month, day = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split(<span class="string">&#x27;-&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 判断是否为闰年（核心规则：能被4整除且不能被100整除，或能被400整除）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_leap</span>(<span class="params">y</span>):</span><br><span class="line">    <span class="keyword">return</span> (y % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> y % <span class="number">100</span> != <span class="number">0</span>) <span class="keyword">or</span> (y % <span class="number">400</span> == <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 定义每个月的天数（平年默认，闰年修改2月天数）</span></span><br><span class="line">days_in_month = [<span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>]</span><br><span class="line"><span class="keyword">if</span> is_leap(year):</span><br><span class="line">    days_in_month[<span class="number">1</span>] = <span class="number">29</span>  <span class="comment"># 闰年2月改为29天</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 计算总天数：前month-1个月的天数和 + 当月天数</span></span><br><span class="line">total_days = <span class="built_in">sum</span>(days_in_month[:month-<span class="number">1</span>]) + day</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(total_days)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第六题"><a href="#第六题" class="headerlink" title="第六题"></a>第六题</h2><p><img src="/../images/2026-5-20/%E7%AC%AC%E5%85%AD%E9%A2%981.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">correct_pwd = <span class="string">&quot;zust&quot;</span></span><br><span class="line">max_attempts = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环最多3次输入密码</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(max_attempts):</span><br><span class="line">    pwd = <span class="built_in">input</span>().strip()  <span class="comment"># 读取输入并去除首尾空格（避免多余空格影响判断）</span></span><br><span class="line">    <span class="keyword">if</span> pwd == correct_pwd:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Success&quot;</span>)</span><br><span class="line">        <span class="keyword">break</span>  <span class="comment"># 密码正确，直接退出循环，程序结束</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Password error&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># 循环正常执行完（未触发break），说明3次都输错了</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Login failed&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>SanaMeow<br>
+        <strong>本文链接：</strong><a href="https://exwxsz.github.io/2026/04/08/Python%E7%9A%84%E5%AD%A6%E4%B9%A0-2/" title="https:&#x2F;&#x2F;exwxsz.github.io&#x2F;2026&#x2F;04&#x2F;08&#x2F;Python的学习-2&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;exwxsz.github.io&#x2F;2026&#x2F;04&#x2F;08&#x2F;Python的学习-2&#x2F;</a><br>
+        
+            本文采用 CC BY-NC-SA 4.0 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/" rel="tag">个人创作</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="tag">技术分享</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.7/dist/twikoo.min.js"></script>
+<script>
+    twikoo.init({
+        envId: 'https://sanatwikoo.netlify.app/.netlify/functions/twikoo',
+        el: '#tcomment'
+    })
+</script>
+
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+<!-- 初始化 Live2D 看板娘（全自定义版） -->
+    <script>
+     // 1. 定义资源路径（用官方CDN）
+     const live2d_path = 'https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/';
+
+     // 2. 封装异步加载资源的方法
+     function loadExternalResource(url, type) {
+      return new Promise((resolve, reject) => {
+       let tag;
+       if (type === 'css') {
+        tag = document.createElement('link');
+        tag.rel = 'stylesheet';
+        tag.href = url;
+       } else if (type === 'js') {
+        tag = document.createElement('script');
+        tag.type = 'module';
+        tag.src = url;
+       }
+       if (tag) {
+        tag.onload = () => resolve(url);
+        tag.onerror = () => reject(url);
+        document.head.appendChild(tag);
+       }
+      });
+     }
+
+     // 3. 加载资源并初始化（这里改你想要的配置！）
+     (async () => {
+      // 避免图片跨域
+      const OriginalImage = window.Image;
+      window.Image = function (...args) {
+       const img = new OriginalImage(...args);
+       img.crossOrigin = "anonymous";
+       return img;
+      };
+      window.Image.prototype = OriginalImage.prototype;
+
+      // 加载样式和核心脚本
+      await Promise.all([
+       loadExternalResource(live2d_path + 'waifu.css', 'css'),
+       loadExternalResource(live2d_path + 'waifu-tips.js', 'js')
+      ]);
+
+      // 🎯 这是自定义配置区！想改什么改什么！
+      initWidget({
+       waifuPath: live2d_path + 'waifu-tips.json',
+       // 🔴 模型CDN（想加更多模型，就把这里改成你自己的模型仓库地址）
+       cdnPath: 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/',
+       //修改CDNPath即可
+       cubism2Path: live2d_path + 'live2d.min.js',
+       cubism5Path: 'https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js',
+       // 🔴 工具按钮（你可以加减按钮）
+       tools: ['hitokoto', 'asteroids', 'switch-model', 'switch-texture', 'photo', 'info', 'quit'],
+       // 🔴 允许拖动看板娘（把 false 改成 true！）
+       drag: true,
+       // 日志等级（error/warn/info/trace）
+       logLevel: 'warn',
+      });
+     })();
+    </script>
+	<script src="/js/popup.js" defer></script></body>
+</html>

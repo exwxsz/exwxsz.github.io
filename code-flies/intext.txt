@@ -1,0 +1,40 @@
+{
+  "test_data": {
+    "id": 8392,
+    "name": "随机测试项目Alpha",
+    "version": 3.14,
+    "active": true,
+    "description": "这是一段用于Python文件读写测试的随机生成文本，包含各种不同的字符和标点符号。测试数据的主要目的是验证文件操作的稳定性和准确性，确保在读取和写入过程中不会出现数据丢失或格式错误。编号7291的实验已经完成。"
+  },
+  "records": [
+    {
+      "record_id": 101,
+      "value": 42.5,
+      "status": "正常",
+      "comment": "系统运行平稳"
+    },
+    {
+      "record_id": 102,
+      "value": 18.9,
+      "status": "警告",
+      "comment": "内存占用较高"
+    },
+    {
+      "record_id": 103,
+      "value": 99.1,
+      "status": "异常",
+      "comment": "连接超时中断"
+    }
+  ],
+  "metadata": {
+    "author": "CodeGeeX",
+    "timestamp": "2023-10-27T10:30:00Z",
+    "tags": [
+      "测试",
+      "读写",
+      "验证",
+      "随机数据",
+      "Python"
+    ]
+  }
+}

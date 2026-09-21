@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> Many ACG 一个RSS图片订阅器 -  SanaMeowのBlog</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5170359_6vkc5mmpv2.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="/images/favicon.ico"
+			type="image/x-icon"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="SanaMeowのBlog" type="application/atom+xml">
+<script>window.POPUP_CONFIG = {"title":"欢迎访问本站,急需大米救助谢谢喵","content":"求求你了喵","images":["/images/zanzuma.png"],"confirmText":"大发慈悲地赏","cancelText":"狠心护食不给","width":"480px","maxWidth":"600px","storageKey":"hexo_popup_counter","showOnce":true};</script><link rel="stylesheet" href="/css/popup.css"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/主题图.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="SanaMeowのBlog">
+        <img
+			src="https://www.mikupara.com/vertical_pics/128447532_p0.jpg"
+			alt="SanaMeow"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://www.mikupara.com/vertical_pics/128447532_p0.jpg" title="SanaMeow">
+			<img
+				src="https://www.mikupara.com/vertical_pics/128447532_p0.jpg"
+				alt="SanaMeow"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>22</div>
+		<div><span>标签</span>4</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="拼好站"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				拼好站
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/atom.xml"
+			title="RSS订阅"
+		>
+			<i
+				class="kirafont
+					
+						icon-dingyue
+					"
+			></i>
+			<div class="kira-list-item-content">
+				RSS订阅
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/pan.html"
+			title="网盘链接转换"
+		>
+			<i
+				class="kirafont
+					
+						icon-wxbgongju
+					"
+			></i>
+			<div class="kira-list-item-content">
+				网盘链接转换
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			target="_blank" rel="noopener" href="https://sanalist.zeabur.app/"
+			title="sana资源盘"
+		>
+			<i
+				class="kirafont
+					
+						icon-logo
+					"
+			></i>
+			<div class="kira-list-item-content">
+				sana资源盘
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/427595734"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: #e76a8d; background-color: rgba(231,106,141,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/exwxsz"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: #191717; background-color: rgba(25,23,23,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://steamcommunity.com/profiles/76561199077601799/"
+				target="_blank"
+				mdui-tooltip="{content: 'steam'}"
+				style="color: #a50f0f; background-color: rgba(165,15,15,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-steam1
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/" style="font-size: 10px;">个人创作</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 20px;">技术分享</a> <a href="/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/" style="font-size: 15px;">杂谈与发电</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 15px;">资源分享</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">22</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">SanaMeow</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		search<div style="text-align:center;margin-top:5px;font-size:12px;color:#888;line-height:1.6"><div>🍀 已运行 <strong id="sidebar-days" style="color:#e67e22;font-weight:600">0</strong> 天</div></div><script>document.addEventListener("DOMContentLoaded",function(){const t=new Date("2026-01-27T00:00:00+08:00");function e(){const e=new Date,n=Math.abs(e-t),o=Math.floor(n/864e5);document.getElementById("sidebar-days").textContent=o}e(),setInterval(e,864e5)})</script>
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/images/主题图.jpg"
+				data-sizes="auto"
+				alt="Many ACG 一个RSS图片订阅器"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>Many ACG 一个RSS图片订阅器</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年09月20日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.3k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
+		</div>
+		<h1 id="自己做的喵"><a href="#自己做的喵" class="headerlink" title="自己做的喵"></a>自己做的喵</h1><h1 id="不要滥用喵！哈！"><a href="#不要滥用喵！哈！" class="headerlink" title="不要滥用喵！哈！"></a>不要滥用喵！哈！</h1><h1 id="RSS图片订阅（RSS-Image-Subscriber）"><a href="#RSS图片订阅（RSS-Image-Subscriber）" class="headerlink" title="RSS图片订阅（RSS Image Subscriber）"></a>RSS图片订阅（RSS Image Subscriber）</h1><p>一个基于 PySide6 的桌面图片订阅下载器：像 RSS 阅读器一样浏览订阅更新，但下载的<strong>始终是主站原图</strong>（jpg&#x2F;png），而不是 RSS 里 CDN 压缩过的 webp 缩略图。<br>基于GLM5.2+Deepseek+codex开发完成</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://img.shields.io/badge/Python-3.9+-blue" alt="Python" class="lazyload"> <img data-fancybox="gallery" data-sizes="auto" data-src="https://img.shields.io/badge/UI-PySide6-green" alt="PySide6" class="lazyload"> <img data-fancybox="gallery" data-sizes="auto" data-src="https://img.shields.io/badge/Platform-Windows-lightgrey" alt="Platform" class="lazyload"></p>
+<blockquote>
+<p>开发与验证环境：Windows 10 &#x2F; Python 3.13 &#x2F; PySide6 6.11 &#x2F; PyInstaller 6.22。<br>代码未使用 3.10+ 专有语法，3.9+ 均可运行。</p>
+</blockquote>
+<h2 id="✨-功能特性"><a href="#✨-功能特性" class="headerlink" title="✨ 功能特性"></a>✨ 功能特性</h2><h3 id="订阅与下载"><a href="#订阅与下载" class="headerlink" title="订阅与下载"></a>订阅与下载</h3><ul>
+<li><strong>RSS 订阅管理</strong>：类 xdown 的左侧订阅树 + 文章列表，支持添加&#x2F;编辑&#x2F;启停多个订阅</li>
+<li><strong>原图下载</strong>：RSS 仅用于发现更新（<code>&lt;id&gt;</code> 即主站作品路径），下载时通过站点 API 获取<strong>原图文件流</strong>（jpg&#x2F;png，带原始文件名），实测原图 5–10 MB vs CDN 压缩图 ~100 KB</li>
+<li><strong>断点续爬</strong>：记录每个订阅的上次爬取位置，下次接着爬；新文章优先下载</li>
+<li><strong>数量限制 &#x2F; 去重</strong>：单次爬取数量可设（0 &#x3D; 不限）；已下载图按图片 ID 去重，可跳过或覆盖</li>
+<li><strong>文章右键单独下载</strong>：不推进订阅断点，即下即用</li>
+</ul>
+<h3 id="无-RSS-站点支持（适配器框架）"><a href="#无-RSS-站点支持（适配器框架）" class="headerlink" title="无 RSS 站点支持（适配器框架）"></a>无 RSS 站点支持（适配器框架）</h3><ul>
+<li>适配器无RSS订阅的图床|图库站点：走站点 API 提取 <code>画师/作者、来源(pixiv链接)、上传时间、标签、原始文件名</code> 并下载原图</li>
+<li><strong>通用适配器</strong>兜底：扫描页面 HTML，优先抓「下载」按钮的原图直链，同时提取作者&#x2F;日期&#x2F;来源&#x2F;标签元数据</li>
+<li>命名规则三级判定：<ol>
+<li>站点专属文件名（如 <code>149639939_p0.png</code>）直接使用</li>
+<li>默认乱命名（<code>001.png</code> &#x2F; <code>image.jpg</code> &#x2F; 哈希串）→ 按 <code>标题_来源域名_日期</code> 重命名</li>
+<li>无下载直链的站 → <code>域名_下载日期_序号</code> 命名（序号跨会话延续）</li>
+</ol>
+</li>
+</ul>
+<h3 id="图片库管理（画廊）"><a href="#图片库管理（画廊）" class="headerlink" title="图片库管理（画廊）"></a>图片库管理（画廊）</h3><ul>
+<li>已下载图片<strong>按下载日期排序</strong>查看，缩略图后台异步加载</li>
+<li><strong>同名去重</strong>：jpg 与 png 同名时仅保留 png 原图（默认开启，可在设置中关闭）</li>
+<li><strong>重复图查找</strong>：按文件名索引，区分「同格式重复」与「跨格式同名」，支持删除&#x2F;重命名&#x2F;一键同名清理（留 png）</li>
+<li><strong>删除带二级确认</strong>：先确认范围，再确认是否删除磁盘原文件（可选仅移除记录）</li>
+<li><strong>已删除记录</strong>：手动删除的图片文件在 JSON 中标记「下载过且被删除过」；后续爬取命中时<strong>不弹窗、不阻塞</strong>，进入功能区面板与常驻标签页，可随时选择重新下载（绕过去重强制重下，成功后自动恢复）</li>
+</ul>
+<h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><ul>
+<li>暗色&#x2F;亮色双主题，自定义背景图片 + 透明度调节</li>
+</ul>
+<h2 id="🚀-快速开始"><a href="#🚀-快速开始" class="headerlink" title="🚀 快速开始"></a>🚀 快速开始</h2><h3 id="开发环境运行"><a href="#开发环境运行" class="headerlink" title="开发环境运行"></a>开发环境运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;repo-url&gt;</span><br><span class="line"><span class="built_in">cd</span> manyacg_get</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">python main.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="打包-EXE（Windows）"><a href="#打包-EXE（Windows）" class="headerlink" title="打包 EXE（Windows）"></a>打包 EXE（Windows）</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">build.bat</span><br></pre></td></tr></table></figure>
+
+<p>产物：<code>dist\RSS图片订阅.exe</code>（单文件、无控制台、内嵌图标）。</p>
+<h3 id="用户数据位置"><a href="#用户数据位置" class="headerlink" title="用户数据位置"></a>用户数据位置</h3><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>%USERPROFILE%\.manyacg_get\config.json</code></td>
+<td>配置（订阅列表、下载设置、主题背景等）</td>
+</tr>
+<tr>
+<td><code>%USERPROFILE%\.manyacg_get\database.json</code></td>
+<td>JSON 数据库（已下载索引、断点位置、删除标记等）</td>
+</tr>
+</tbody></table>
+<p>卸载时删除该目录即可清除全部数据。默认图片保存路径 <code>D:\图片</code>（可在设置中修改）。</p>
+<h2 id="📁-项目结构"><a href="#📁-项目结构" class="headerlink" title="📁 项目结构"></a>📁 项目结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">manyacg_get/</span><br><span class="line">├── main.py                  # 程序入口（QApplication、图标）</span><br><span class="line">├── requirements.txt         # Python 依赖</span><br><span class="line">├── build.bat                # 一键打包 EXE 脚本（PyInstaller）</span><br><span class="line">├── assets/</span><br><span class="line">│   └── app.ico              # 应用图标</span><br><span class="line">│</span><br><span class="line">├── core/                    # 核心业务逻辑（无 UI 依赖，可独立测试）</span><br><span class="line">│   ├── config_manager.py    # 配置管理（读写 config.json）</span><br><span class="line">│   ├── database_manager.py  # JSON 数据库（去重索引/断点/删除标记）</span><br><span class="line">│   ├── rss_parser.py        # RSS/Atom 解析（仅发现更新，不下载）</span><br><span class="line">│   ├── manyacg_api.py       # manyacg.top 主站 API 客户端（原图获取）</span><br><span class="line">│   ├── site_adapters.py     # 无 RSS 站点适配器框架（someacg + 通用）</span><br><span class="line">│   ├── html_extractor.py    # 无 RSS 提取入口（委托给适配器）</span><br><span class="line">│   └── image_downloader.py  # 并发下载器（去重/断点/命名/删除标记）</span><br><span class="line">│</span><br><span class="line">├── ui/                      # PySide6 界面</span><br><span class="line">│   ├── main_window.py       # 主窗口（订阅树/文章表/画廊/已删除记录/面板）</span><br><span class="line">│   ├── gallery_widget.py    # 已下载图片画廊（缩略图/重复图/删除/重命名）</span><br><span class="line">│   ├── settings_dialog.py   # 设置对话框</span><br><span class="line">│   └── styles.py            # 暗色/亮色 QSS 主题</span><br><span class="line">│</span><br><span class="line">├── tests/                   # 测试脚本（见下）</span><br><span class="line">└── dev/                     # 开发期站点分析草稿（可忽略）</span><br></pre></td></tr></table></figure>
+
+<p>详细架构与数据流说明见 <a href="docs/ARCHITECTURE.md">docs&#x2F;ARCHITECTURE.md</a>。</p>
+<h2 id="🧪-运行测试"><a href="#🧪-运行测试" class="headerlink" title="🧪 运行测试"></a>🧪 运行测试</h2><p>测试基于本地 HTTP 服务器与临时目录，不污染用户数据；部分用例需要外网（manyacg&#x2F;someacg 真实下载）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">python tests/test_deleted_tab.py      <span class="comment"># 已删除记录标签页（含重下闭环）</span></span><br><span class="line">python tests/test_deleted_flow.py     <span class="comment"># 删除标记 → 命中 → 重下恢复闭环</span></span><br><span class="line">python tests/test_dedup.py            <span class="comment"># 同名去重 + 画廊重复图 + 设置项</span></span><br><span class="line">python tests/test_bugfix_settings.py  <span class="comment"># 设置保存后订阅列表刷新</span></span><br><span class="line">python tests/test_e2e.py              <span class="comment"># manyacg RSS → 原图下载端到端（需外网）</span></span><br><span class="line">python tests/test_someacg.py          <span class="comment"># someacg 适配器提取+下载（需外网）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="⚠️-免责声明"><a href="#⚠️-免责声明" class="headerlink" title="⚠️ 免责声明"></a>⚠️ 免责声明</h2><p>本项目仅供学习交流使用。图片版权归原作者所有，请遵守各站点的服务条款与爬取频率礼仪（程序已内置请求限速与重试）。使用本项目产生的一切后果由使用者自行承担。</p>
+<h2 id="📄-许可证"><a href="#📄-许可证" class="headerlink" title="📄 许可证"></a>📄 许可证</h2><p>MIT License（可按需修改，见下方建议）</p>
+<meting-js
+  server="netease"
+  type="song"
+  id="歌曲UID"
+  mode="circulation"
+  autoplay="false"
+  mutex="false"
+  listmaxheight="340px"
+  preload="auto"
+  theme="#ad7a86">
+</meting-js>
+
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://api.catcat.li/api/random" alt="随机图片" class="lazyload"></p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>SanaMeow<br>
+        <strong>本文链接：</strong><a href="https://exwxsz.github.io/2026/09/20/Many-ACG-%E4%B8%80%E4%B8%AARSS%E5%9B%BE%E7%89%87%E8%AE%A2%E9%98%85%E5%99%A8/" title="https:&#x2F;&#x2F;exwxsz.github.io&#x2F;2026&#x2F;09&#x2F;20&#x2F;Many-ACG-一个RSS图片订阅器&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;exwxsz.github.io&#x2F;2026&#x2F;09&#x2F;20&#x2F;Many-ACG-一个RSS图片订阅器&#x2F;</a><br>
+        
+            本文采用 CC BY-NC-SA 4.0 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/" rel="tag">个人创作</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/" rel="tag">杂谈与发电</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" rel="tag">资源分享</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.7/dist/twikoo.min.js"></script>
+<script>
+    twikoo.init({
+        envId: 'https://sanatwikoo.netlify.app/.netlify/functions/twikoo',
+        el: '#tcomment'
+    })
+</script>
+
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+<!-- 初始化 Live2D 看板娘（全自定义版） -->
+    <script>
+     // 1. 定义资源路径（用官方CDN）
+     const live2d_path = 'https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/';
+
+     // 2. 封装异步加载资源的方法
+     function loadExternalResource(url, type) {
+      return new Promise((resolve, reject) => {
+       let tag;
+       if (type === 'css') {
+        tag = document.createElement('link');
+        tag.rel = 'stylesheet';
+        tag.href = url;
+       } else if (type === 'js') {
+        tag = document.createElement('script');
+        tag.type = 'module';
+        tag.src = url;
+       }
+       if (tag) {
+        tag.onload = () => resolve(url);
+        tag.onerror = () => reject(url);
+        document.head.appendChild(tag);
+       }
+      });
+     }
+
+     // 3. 加载资源并初始化（这里改你想要的配置！）
+     (async () => {
+      // 避免图片跨域
+      const OriginalImage = window.Image;
+      window.Image = function (...args) {
+       const img = new OriginalImage(...args);
+       img.crossOrigin = "anonymous";
+       return img;
+      };
+      window.Image.prototype = OriginalImage.prototype;
+
+      // 加载样式和核心脚本
+      await Promise.all([
+       loadExternalResource(live2d_path + 'waifu.css', 'css'),
+       loadExternalResource(live2d_path + 'waifu-tips.js', 'js')
+      ]);
+
+      // 🎯 这是自定义配置区！想改什么改什么！
+      initWidget({
+       waifuPath: live2d_path + 'waifu-tips.json',
+       // 🔴 模型CDN（想加更多模型，就把这里改成你自己的模型仓库地址）
+       cdnPath: 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/',
+       //修改CDNPath即可
+       cubism2Path: live2d_path + 'live2d.min.js',
+       cubism5Path: 'https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js',
+       // 🔴 工具按钮（你可以加减按钮）
+       tools: ['hitokoto', 'asteroids', 'switch-model', 'switch-texture', 'photo', 'info', 'quit'],
+       // 🔴 允许拖动看板娘（把 false 改成 true！）
+       drag: true,
+       // 日志等级（error/warn/info/trace）
+       logLevel: 'warn',
+      });
+     })();
+    </script>
+	<script src="/js/popup.js" defer></script></body>
+</html>
