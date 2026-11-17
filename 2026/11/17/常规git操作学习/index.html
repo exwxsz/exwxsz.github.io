@@ -63,8 +63,8 @@
 <script src="/deps/js/APlayer.min.js"></script>
 <script src="/deps/js/Meting.min.js"></script>
 
-	<meta name="generator" content="Hexo 8.1.2"><script>window.POPUP_CONFIG = {"title":"欢迎访问本站,急需大米救助谢谢喵","content":"求求你了喵","images":["/images/zanzuma.png"],"confirmText":"大发慈悲地赏","cancelText":"狠心护食不给","width":"480px","maxWidth":"600px","storageKey":"hexo_popup_counter","showOnce":true};</script><link rel="stylesheet" href="/css/popup.css"><link rel="alternate" href="/atom.xml" title="SanaMeowのBlog" type="application/atom+xml">
-</head>
+	<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="SanaMeowのBlog" type="application/atom+xml">
+<script>window.POPUP_CONFIG = {"title":"欢迎访问本站,急需大米救助谢谢喵","content":"求求你了喵","images":["/images/zanzuma.png"],"confirmText":"大发慈悲地赏","cancelText":"狠心护食不给","width":"480px","maxWidth":"600px","storageKey":"hexo_popup_counter","showOnce":true};</script><link rel="stylesheet" href="/css/popup.css"></head>
 
 	<body>
 		<div
@@ -398,8 +398,8 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2026年11月17日</a>
-			<a><i class="kirafont icon-edit-fill"></i>1.7k 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 7 分钟</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.8k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 12 分钟</a>
 		</div>
 		<hr>
 <h1 id="Git-新手速成：从-add-commit-push-到撤销后悔药"><a href="#Git-新手速成：从-add-commit-push-到撤销后悔药" class="headerlink" title="Git 新手速成：从 add&#x2F;commit&#x2F;push 到撤销后悔药"></a>Git 新手速成：从 add&#x2F;commit&#x2F;push 到撤销后悔药</h1><blockquote>
@@ -527,6 +527,39 @@
 <li>出了任何事，<code>git reflog</code> 都能找到回去的路——只要强推之前，本地记录 90 天内都能恢复。</li>
 </ul>
 <h2 id="附：流程图渲染说明"><a href="#附：流程图渲染说明" class="headerlink" title="附：流程图渲染说明"></a>附：流程图渲染说明</h2><p>本文用 ASCII 代码块画图，任何 Markdown 渲染器都能正常显示。如果你的 Hexo 主题支持 mermaid 插件（hexo-filter-mermaid-diagrams），可以把第一节换成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    A[工作区] --&gt;|git add .| B[暂存区]</span><br><span class="line">    B --&gt;|git commit| C[提交历史]</span><br><span class="line">    C --&gt;|git push| D[(GitHub)]</span><br></pre></td></tr></table></figure>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://api.catcat.li/api/random" alt="随机图片" class="lazyload"></p>
+<h2 id="十、-gitignore：黑名单与白名单"><a href="#十、-gitignore：黑名单与白名单" class="headerlink" title="十、.gitignore：黑名单与白名单"></a>十、.gitignore：黑名单与白名单</h2><p><code>.gitignore</code> 是放在仓库根目录的纯文本文件，每行一条规则，被命中的文件&#x2F;文件夹 git 不再追踪、不会上传。它本身只是普通文件，记事本&#x2F;VS Code&#x2F;<code>touch .gitignore</code> 都能创建，Git 没有”创建 .gitignore”的专用指令。</p>
+<h3 id="基本规则"><a href="#基本规则" class="headerlink" title="基本规则"></a>基本规则</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是注释</span><br><span class="line">git-tutorial.md     # 完整匹配文件名（不会模糊匹配！）</span><br><span class="line">gite/git1/          # 末尾带 / 表示只匹配文件夹，路径以仓库根目录为起点</span><br><span class="line">*.log               # * 通配符：所有 .log 文件</span><br><span class="line">build/              # 只忽略根目录下的 build 文件夹（开头带 / 固定从根目录匹配）</span><br></pre></td></tr></table></figure>
+
+<p><strong>最常踩的坑：规则是完整匹配文件名的。</strong> 文件叫 <code>git-tutorial.md</code>，写 <code>git-tutorial</code> 是匹配不到的——不会自动带上扩展名，也没有”包含即命中”的模糊匹配。实测踩过：<code>.gitignore</code> 里写了 <code>git-tutorial</code>，结果文档照样被 <code>git add .</code> 加进暂存区，改成 <code>git-tutorial.md</code> 才生效。</p>
+<p>另一个大坑：<strong><code>.gitignore</code> 只对”还没被 git 追踪”的文件生效</strong>。已经 commit 过的文件，光写规则没用，要先 <code>git rm -r --cached 路径</code>（从追踪列表移除，磁盘文件保留），再 <code>git add .</code> 重新提交。</p>
+<h3 id="黑名单写法（默认全要，点名不要的）"><a href="#黑名单写法（默认全要，点名不要的）" class="headerlink" title="黑名单写法（默认全要，点名不要的）"></a>黑名单写法（默认全要，点名不要的）</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 忽略 Git 教学文档（已复制到博客仓库）</span><br><span class="line">git-tutorial.md</span><br><span class="line">.workbuddy</span><br></pre></td></tr></table></figure>
+
+<p>思路：列出<strong>不想上传</strong>的东西，其余默认全部上传。简单直接，适合根目录本来就干净的仓库。</p>
+<p>缺点：<strong>漏一个就翻车</strong>。以后往根目录随手放个新文件夹（临时截图、下载的压缩包），<code>git add .</code> 时它默认会被上传，除非你记得回来补规则。</p>
+<h3 id="白名单写法（默认全不要，点名要的）"><a href="#白名单写法（默认全不要，点名要的）" class="headerlink" title="白名单写法（默认全不要，点名要的）"></a>白名单写法（默认全不要，点名要的）</h3><p>如果你真实意图是”<strong>只上传指定的几样</strong>“，白名单才是贴切的写法。先用 <code>/*</code> 屏蔽根目录下所有东西，再用 <code>!</code> 逐个放行：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">!/.gitignore</span><br><span class="line">!/README.md</span><br><span class="line">!/generate_list.py</span><br><span class="line">!/images/</span><br></pre></td></tr></table></figure>
+
+<p>逐行解读：</p>
+<ul>
+<li><code>/*</code> — 屏蔽根目录下的<strong>所有</strong>文件和文件夹。注意写 <code>/*</code> 而不是 <code>*</code>：<code>/*</code> 只作用于根目录这一层，配合 <code>!</code> 放行才有意义。</li>
+<li><code>!</code> 开头的行 — “例外&#x2F;放行”，把前面被屏蔽的重新加回来。<strong>顺序很重要</strong>：<code>!</code> 必须写在对应屏蔽规则之后。</li>
+<li><code>!/.gitignore</code> — 连 <code>.gitignore</code> 自己都要放行。不放行的话它会被自己屏蔽掉，永远提交不了，规则就只活在你这台电脑上，换设备 clone 下来就失效了。</li>
+</ul>
+<p><strong>白名单最大的坑：被屏蔽的文件夹里，文件无法直接放行。</strong> git 出于性能考虑，一个文件夹被整体屏蔽后，git 根本不会走进去，所以不能只放行里面的某个文件——必须先把文件夹路径放行，再放行里面的东西：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">!/images/</span><br><span class="line">images/*</span><br><span class="line">!/images/chapters/</span><br></pre></td></tr></table></figure>
+
+<p>意思是：屏蔽一切 → 放行 images 文件夹本身 → 屏蔽 images 里所有内容 → 放行 images&#x2F;chapters。一层一层”开门”，想放行多深的路径就要开多少层门。</p>
+<p><strong>注意</strong>：白名单只影响”以后新增的文件”。已经被 git 追踪的文件（之前 commit 过的）不管规则怎么写都继续被追踪，想解除还是要走 <code>git rm --cached</code> 那套。</p>
+<h3 id="排查工具：查某个文件被哪条规则命中"><a href="#排查工具：查某个文件被哪条规则命中" class="headerlink" title="排查工具：查某个文件被哪条规则命中"></a>排查工具：查某个文件被哪条规则命中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git check-ignore -v 文件路径</span><br><span class="line"><span class="comment"># 输出示例：.gitignore:2:git-tutorial.md	git-tutorial.md</span></span><br><span class="line"><span class="comment"># 含义：第2行的规则 git-tutorial.md 命中了这个文件</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实战记录：本仓库的-gitignore-检查（2026-11-17）"><a href="#实战记录：本仓库的-gitignore-检查（2026-11-17）" class="headerlink" title="实战记录：本仓库的 .gitignore 检查（2026-11-17）"></a>实战记录：本仓库的 .gitignore 检查（2026-11-17）</h3><p>本仓库（漫画图床）当时用的是黑名单写法：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git-tutorial.md</span><br><span class="line">.workbuddy</span><br></pre></td></tr></table></figure>
+
+<p>检查结论：根目录恰好只有 <code>images/</code>、<code>README.md</code>、<code>generate_list.py</code>、<code>git-tutorial.md</code>、<code>.workbuddy</code>、<code>.gitignore</code> 这几样，黑名单正好覆盖了不想传的两样，<strong>当前效果正确，保持不改</strong>。如果哪天根目录开始堆杂东西，就换成白名单写法。</p>
+<p>经验：两种写法没有绝对优劣——根目录干净且内容固定用黑名单，”只允许几样东西”或怕误传用白名单。</p>
+<h2 id="附：流程图渲染说明-1"><a href="#附：流程图渲染说明-1" class="headerlink" title="附：流程图渲染说明"></a>附：流程图渲染说明</h2><p>本文用 ASCII 代码块画图，任何 Markdown 渲染器都能正常显示。如果你的 Hexo 主题支持 mermaid 插件（hexo-filter-mermaid-diagrams），可以把第一节换成：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    A[工作区] --&gt;|git add .| B[暂存区]</span><br><span class="line">    B --&gt;|git commit| C[提交历史]</span><br><span class="line">    C --&gt;|git push| D[(GitHub)]</span><br></pre></td></tr></table></figure>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="https://api.catcat.li/api/random" alt="随机图片" class="lazyload"></p>
 
