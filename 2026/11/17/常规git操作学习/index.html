@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 常规git操作学习 -  SanaMeowのBlog</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5170359_ng8cyl192n9.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="/images/favicon.ico"
+			type="image/x-icon"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+				
+<link rel="stylesheet" href="/custom.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="SanaMeowのBlog" type="application/atom+xml">
+<script>window.POPUP_CONFIG = {"title":"欢迎访问本站,急需大米救助谢谢喵","content":"求求你了喵","images":["/images/zanzuma.png"],"confirmText":"大发慈悲地赏","cancelText":"狠心护食不给","width":"480px","maxWidth":"600px","storageKey":"hexo_popup_counter","showOnce":true};</script><link rel="stylesheet" href="/css/popup.css"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/images/主题图.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="SanaMeowのBlog">
+        <img
+			src="https://www.mikupara.com/vertical_pics/128447532_p0.jpg"
+			alt="SanaMeow"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://www.mikupara.com/vertical_pics/128447532_p0.jpg" title="SanaMeow">
+			<img
+				src="https://www.mikupara.com/vertical_pics/128447532_p0.jpg"
+				alt="SanaMeow"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>23</div>
+		<div><span>标签</span>4</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="拼好站"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				拼好站
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/atom.xml"
+			title="RSS订阅"
+		>
+			<i
+				class="kirafont
+					
+						icon-dingyue
+					"
+			></i>
+			<div class="kira-list-item-content">
+				RSS订阅
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/pan.html"
+			title="网盘链接转换"
+		>
+			<i
+				class="kirafont
+					
+						icon-wxbgongju
+					"
+			></i>
+			<div class="kira-list-item-content">
+				网盘链接转换
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			target="_blank" rel="noopener" href="https://sanalist.zeabur.app/"
+			title="sana资源盘"
+		>
+			<i
+				class="kirafont
+					
+						icon-logo
+					"
+			></i>
+			<div class="kira-list-item-content">
+				sana资源盘
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="https://exwxsz.github.io/ncm-converter/"
+			title="ncm格式转换"
+		>
+			<i
+				class="kirafont
+					
+						icon-yinle
+					"
+			></i>
+			<div class="kira-list-item-content">
+				ncm格式转换
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/427595734"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: #e76a8d; background-color: rgba(231,106,141,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/exwxsz"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: #191717; background-color: rgba(25,23,23,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://steamcommunity.com/profiles/76561199077601799/"
+				target="_blank"
+				mdui-tooltip="{content: 'steam'}"
+				style="color: #a50f0f; background-color: rgba(165,15,15,.15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-steam1
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/%E4%B8%AA%E4%BA%BA%E5%88%9B%E4%BD%9C/" style="font-size: 10px;">个人创作</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 20px;">技术分享</a> <a href="/tags/%E6%9D%82%E8%B0%88%E4%B8%8E%E5%8F%91%E7%94%B5/" style="font-size: 15px;">杂谈与发电</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 15px;">资源分享</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">23</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">SanaMeow</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		search<div style="text-align:center;margin-top:5px;font-size:12px;color:#888;line-height:1.6"><div>🍀 已运行 <strong id="sidebar-days" style="color:#e67e22;font-weight:600">0</strong> 天</div></div><script>document.addEventListener("DOMContentLoaded",function(){const t=new Date("2026-01-27T00:00:00+08:00");function e(){const e=new Date,n=Math.abs(e-t),o=Math.floor(n/864e5);document.getElementById("sidebar-days").textContent=o}e(),setInterval(e,864e5)})</script>
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/images/主题图.jpg"
+				data-sizes="auto"
+				alt="常规git操作学习"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>常规git操作学习</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年11月17日</a>
+			<a><i class="kirafont icon-edit-fill"></i>1.7k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 7 分钟</a>
+		</div>
+		<meting-js
+  server="netease"
+  type="song"
+  id="1919802219"
+  mode="circulation"
+  autoplay="false"
+  mutex="false"
+  listmaxheight="340px"
+  preload="auto"
+  theme="#ad7a86">
+</meting-js>
+
+<hr>
+<h1 id="Git-新手速成：从-add-commit-push-到撤销后悔药"><a href="#Git-新手速成：从-add-commit-push-到撤销后悔药" class="headerlink" title="Git 新手速成：从 add&#x2F;commit&#x2F;push 到撤销后悔药"></a>Git 新手速成：从 add&#x2F;commit&#x2F;push 到撤销后悔药</h1><blockquote>
+<p>面向只会 <code>git add .</code> &#x2F; <code>git commit -m</code> &#x2F; <code>git push</code> 三件套的新手，讲清楚 Git 的三个区域，以及常用的查看、撤销、回退指令。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="一、先搞懂三个区域"><a href="#一、先搞懂三个区域" class="headerlink" title="一、先搞懂三个区域"></a>一、先搞懂三个区域</h2><p>Git 的核心其实是三个”地方”，你的文件改动在里面层层流转：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">┌─────────────┐   git add .   ┌─────────────┐  git commit  ┌─────────────┐</span><br><span class="line">│   工作区     │ ───────────→ │   暂存区     │ ──────────→  │  提交历史    │</span><br><span class="line">│             │              │             │              │             │</span><br><span class="line">│ 你眼前看到的 │              │ 下次 commit │              │ 一条条提交   │</span><br><span class="line">│ 文件，正在   │              │ 要打包的内容 │              │ 记录，push 后│</span><br><span class="line">│ 编辑的地方   │              │ 清单        │              │ 传到 GitHub  │</span><br><span class="line">└─────────────┘              └─────────────┘              └─────────────┘</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>工作区</strong>：磁盘上你正在编辑的文件本身。</li>
+<li><strong>暂存区</strong>：”下次 commit 要打包哪些内容”的清单。<code>git add</code> 就是往清单里放东西。</li>
+<li><strong>提交历史</strong>：<code>git commit</code> 把暂存区的内容打包成一条提交记录；<code>git push</code> 之后才真正到 GitHub。</li>
+</ul>
+<p>暂存区存在的意义：让你可以<strong>只提交一部分改动</strong>。比如改了 5 个文件，想分两次提交，就 <code>git add 文件1 文件2</code> 只加一部分。平时用 <code>git add .</code>（加全部）感觉不到它的存在，但它一直在工作。</p>
+<h2 id="二、日常四件套"><a href="#二、日常四件套" class="headerlink" title="二、日常四件套"></a>二、日常四件套</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status            <span class="comment"># 看当前状态：改了什么、暂存区里有什么</span></span><br><span class="line">git add .             <span class="comment"># 把所有改动放进暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;说明&quot;</span>  <span class="comment"># 把暂存区内容打包成一次提交</span></span><br><span class="line">git push origin main  <span class="comment"># 推送到 GitHub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、看历史（排查问题必会）"><a href="#三、看历史（排查问题必会）" class="headerlink" title="三、看历史（排查问题必会）"></a>三、看历史（排查问题必会）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --oneline        <span class="comment"># 每条提交一行，简洁版历史</span></span><br><span class="line">git <span class="built_in">log</span> --oneline -5     <span class="comment"># 只看最近 5 条</span></span><br><span class="line">git diff                 <span class="comment"># 看改了但还没 add 的内容</span></span><br><span class="line">git diff --staged        <span class="comment"># 看已 add、还没 commit 的内容</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="四、同步远端"><a href="#四、同步远端" class="headerlink" title="四、同步远端"></a>四、同步远端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main   <span class="comment"># 把 GitHub 上的最新内容拉下来合并（多设备必用）</span></span><br><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt;   <span class="comment"># 第一次把远端仓库下载到本地</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="五、撤销与后悔药（按破坏力从小到大）"><a href="#五、撤销与后悔药（按破坏力从小到大）" class="headerlink" title="五、撤销与后悔药（按破坏力从小到大）"></a>五、撤销与后悔药（按破坏力从小到大）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git restore 文件名            <span class="comment"># 丢弃某文件未提交的改动</span></span><br><span class="line">git restore --staged 文件名   <span class="comment"># 把文件移出暂存区（撤销 git add）</span></span><br><span class="line">git revert &lt;提交哈希&gt;          <span class="comment"># 生成一条&quot;反向提交&quot;抵消某次提交（不改历史，最安全）</span></span><br><span class="line">git reset --soft HEAD~1      <span class="comment"># 撤销最近一次提交，改动保留在暂存区</span></span><br><span class="line">git reset --hard HEAD~1      <span class="comment"># 撤销最近一次提交，改动也删掉（危险！）</span></span><br><span class="line">git reflog                   <span class="comment"># 终极后悔药：看所有操作记录，配合 reset 找回</span></span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>HEAD~1</code> 表示”当前最新提交的上一条”，<code>HEAD~2</code> 就是上上条，以此类推。</p>
+<h2 id="六、删除最新一次提交：两种方式对比"><a href="#六、删除最新一次提交：两种方式对比" class="headerlink" title="六、删除最新一次提交：两种方式对比"></a>六、删除最新一次提交：两种方式对比</h2><p>假设最新提交是 <code>fd74429</code>，想把它删掉，且已经 push 过了：</p>
+<p><strong>方式 A：连内容一起丢掉</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD~1</span><br><span class="line">git push --force origin main</span><br></pre></td></tr></table></figure>
+
+<p><strong>方式 B：只删提交记录，内容保留</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD~1</span><br><span class="line">git push --force origin main</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>提交记录 fd74429</th>
+<th>磁盘上的文件</th>
+<th>提交后又改了还没 commit 的内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方式 A <code>--hard</code></td>
+<td>删掉</td>
+<td>回退到上一条提交的样子</td>
+<td><strong>一并抹掉</strong></td>
+</tr>
+<tr>
+<td>方式 B <code>--soft</code></td>
+<td>删掉</td>
+<td>保持现状（含该提交的改动）</td>
+<td>完好保留</td>
+</tr>
+</tbody></table>
+<p>一句话记忆：<strong>A &#x3D; 我连内容都不想要了；B &#x3D; 记录不要了，内容留下重新弄</strong>。</p>
+<p>方式 B 的完整流程（改动已在暂存区，改完重新提交）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD~1     <span class="comment"># 删提交记录，改动退回暂存区</span></span><br><span class="line"><span class="comment"># 此时可以随便改文件，改好了：</span></span><br><span class="line">git add .                   <span class="comment"># 又改了内容才需要，没改可跳过</span></span><br><span class="line">git commit -m <span class="string">&quot;新的提交说明&quot;</span></span><br><span class="line">git push --force origin main</span><br></pre></td></tr></table></figure>
+
+<p><strong>关于 <code>--force</code> 强推</strong>：它会重写远端历史。个人仓库没问题，多人协作的仓库会把别人的记录搞乱，慎用。</p>
+<h3 id="实战记录：用方式B删除一次已推送的提交"><a href="#实战记录：用方式B删除一次已推送的提交" class="headerlink" title="实战记录：用方式B删除一次已推送的提交"></a>实战记录：用方式B删除一次已推送的提交</h3><p>2026-11-17 真实操作记录。场景：提交 <code>fd74429</code>（”转生恶意王子”，11月16日）不满意，已推送到 GitHub，要用方式B撤回。实际执行的完整指令清单：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git log --oneline -3</code></td>
+<td>看最近3条提交，确认要删的是最新一条</td>
+</tr>
+<tr>
+<td><code>git status --short</code></td>
+<td>简洁版状态，确认工作区没有未提交的改动（方式B其实不依赖这步，但养成习惯）</td>
+</tr>
+<tr>
+<td><code>git reset --soft HEAD~1</code></td>
+<td><strong>核心操作</strong>：撤销最新提交，改动退回暂存区，磁盘文件不动</td>
+</tr>
+<tr>
+<td><code>git log --oneline -2</code></td>
+<td>验证：HEAD 已变成上一条提交的哈希</td>
+</tr>
+<tr>
+<td><code>git push --force-with-lease origin main</code></td>
+<td>强推同步远端。比 <code>--force</code> 多一层保险：如果远端有你不知道的新提交会拒绝推送，个人仓库效果一样，但更安全</td>
+</tr>
+<tr>
+<td><code>git status</code> &#x2F; <code>git log --oneline -2</code></td>
+<td>收尾验证跟踪状态和历史</td>
+</tr>
+</tbody></table>
+<p>执行后 <code>git status</code> 的关键输出及解读：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">On branch main</span><br><span class="line">Your branch is behind &#x27;origin/main&#x27; by 1 commit   ← 强推前正常，GitHub 上还留着旧提交</span><br><span class="line">Changes to be committed:                           ← 方式B的效果：改动退回了暂存区</span><br><span class="line">    （原提交里的文件全部列在这里）</span><br></pre></td></tr></table></figure>
+
+<p>强推成功后关键输出：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ fd74429...65bff6b main -&gt; main (forced update)</span><br></pre></td></tr></table></figure>
+
+<p>意思是远端 main 从 <code>fd74429</code> 被强制改写为 <code>65bff6b</code>。之后 <code>git status</code> 会显示 <code>up to date with &#39;origin/main&#39;</code>，本地远端完全同步。此时重新提交只需正常 <code>git commit -m</code> + <code>git push</code>，不再需要 force。</p>
+<h2 id="七、提交说明是可以改的：–amend"><a href="#七、提交说明是可以改的：–amend" class="headerlink" title="七、提交说明是可以改的：–amend"></a>七、提交说明是可以改的：–amend</h2><p>很多人以为 commit 的说明写错了就没救，其实能改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend -m <span class="string">&quot;新的说明&quot;</span>          <span class="comment"># 改最近一次提交的说明</span></span><br><span class="line">git commit --amend --no-edit             <span class="comment"># 不改说明，只把暂存区内容并入这次提交</span></span><br></pre></td></tr></table></figure>
+
+<p><code>--amend</code> 会用当前暂存区的内容<strong>替换掉最近一次提交</strong>。妙用：刚 commit 完发现漏了两个文件——</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add 漏掉的文件</span><br><span class="line">git commit --amend --no-edit    <span class="comment"># 把漏掉的补进上一次提交，不用多一条提交</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：amend 同样改写了历史，push 过的提交 amend 后要用 <code>git push --force origin main</code>。</p>
+<h2 id="八、分支基础"><a href="#八、分支基础" class="headerlink" title="八、分支基础"></a>八、分支基础</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git branch               <span class="comment"># 列出本地分支</span></span><br><span class="line">git switch -c 新分支名    <span class="comment"># 创建并切换到新分支</span></span><br><span class="line">git switch main          <span class="comment"># 切回主分支</span></span><br><span class="line">git merge 新分支名        <span class="comment"># 在 main 上执行，把分支内容合并进来</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="九、经验法则"><a href="#九、经验法则" class="headerlink" title="九、经验法则"></a>九、经验法则</h2><ul>
+<li>想”安全撤销、给别人看”→ 用 <code>git revert</code>（不改历史）。</li>
+<li>想”删掉自己刚犯的错”→ 用 <code>git reset</code> + 强推。</li>
+<li>做任何危险操作前，先 <code>git log --oneline</code> 记下当前位置。</li>
+<li>出了任何事，<code>git reflog</code> 都能找到回去的路——只要强推之前，本地记录 90 天内都能恢复。</li>
+</ul>
+<h2 id="附：流程图渲染说明"><a href="#附：流程图渲染说明" class="headerlink" title="附：流程图渲染说明"></a>附：流程图渲染说明</h2><p>本文用 ASCII 代码块画图，任何 Markdown 渲染器都能正常显示。如果你的 Hexo 主题支持 mermaid 插件（hexo-filter-mermaid-diagrams），可以把第一节换成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">    A[工作区] --&gt;|git add .| B[暂存区]</span><br><span class="line">    B --&gt;|git commit| C[提交历史]</span><br><span class="line">    C --&gt;|git push| D[(GitHub)]</span><br></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img data-fancybox="gallery" data-sizes="auto" data-src="https://api.catcat.li/api/random" alt="随机图片" class="lazyload"></h2>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>SanaMeow<br>
+        <strong>本文链接：</strong><a href="https://exwxsz.github.io/2026/11/17/%E5%B8%B8%E8%A7%84git%E6%93%8D%E4%BD%9C%E5%AD%A6%E4%B9%A0/" title="https:&#x2F;&#x2F;exwxsz.github.io&#x2F;2026&#x2F;11&#x2F;17&#x2F;常规git操作学习&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;exwxsz.github.io&#x2F;2026&#x2F;11&#x2F;17&#x2F;常规git操作学习&#x2F;</a><br>
+        
+            本文采用 CC BY-NC-SA 4.0 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" rel="tag">技术分享</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.7/dist/twikoo.min.js"></script>
+<script>
+    twikoo.init({
+        envId: 'https://sanatwikoo.netlify.app/.netlify/functions/twikoo',
+        el: '#tcomment'
+    })
+</script>
+
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+<!-- 初始化 Live2D 看板娘（全自定义版） -->
+    <script>
+     // 1. 定义资源路径（用官方CDN）
+     const live2d_path = 'https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/';
+
+     // 2. 封装异步加载资源的方法
+     function loadExternalResource(url, type) {
+      return new Promise((resolve, reject) => {
+       let tag;
+       if (type === 'css') {
+        tag = document.createElement('link');
+        tag.rel = 'stylesheet';
+        tag.href = url;
+       } else if (type === 'js') {
+        tag = document.createElement('script');
+        tag.type = 'module';
+        tag.src = url;
+       }
+       if (tag) {
+        tag.onload = () => resolve(url);
+        tag.onerror = () => reject(url);
+        document.head.appendChild(tag);
+       }
+      });
+     }
+
+     // 3. 加载资源并初始化（这里改你想要的配置！）
+     (async () => {
+      // 避免图片跨域
+      const OriginalImage = window.Image;
+      window.Image = function (...args) {
+       const img = new OriginalImage(...args);
+       img.crossOrigin = "anonymous";
+       return img;
+      };
+      window.Image.prototype = OriginalImage.prototype;
+
+      // 加载样式和核心脚本
+      await Promise.all([
+       loadExternalResource(live2d_path + 'waifu.css', 'css'),
+       loadExternalResource(live2d_path + 'waifu-tips.js', 'js')
+      ]);
+
+      // 🎯 这是自定义配置区！想改什么改什么！
+      initWidget({
+       waifuPath: live2d_path + 'waifu-tips.json',
+       // 🔴 模型CDN（想加更多模型，就把这里改成你自己的模型仓库地址）
+       cdnPath: 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/',
+       //修改CDNPath即可
+       cubism2Path: live2d_path + 'live2d.min.js',
+       cubism5Path: 'https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js',
+       // 🔴 工具按钮（你可以加减按钮）
+       tools: ['hitokoto', 'asteroids', 'switch-model', 'switch-texture', 'photo', 'info', 'quit'],
+       // 🔴 允许拖动看板娘（把 false 改成 true！）
+       drag: true,
+       // 日志等级（error/warn/info/trace）
+       logLevel: 'warn',
+      });
+     })();
+    </script>
+	<script src="/js/popup.js" defer></script></body>
+</html>
