@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://exwxsz.github.io/sitemap.xml
